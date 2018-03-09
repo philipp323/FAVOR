@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="style.css">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8"/>
+  <title>FAVOR</title>
+</head>
+
+<body background="img/orange_stripes.jpg">
+  <div class="navbar-fixed">
+    <nav style="height:65px" class="transparent">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center hide-on-med-and-down"><b>Family Default</b></a>
+        <a href="#" data-activates="mobile" class="button-collapse"><i class="large material-icons">menu</i></a>
+
+        <!--Left alligned objects-->
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li>
+            <a style="height:65px" href="#" class="image waves-effect">
+              <img src="img/user_business_male.png" style="margin-top:1px" width=60 height=60>
+            </a>
+          </li>
+          <li>
+            <a style="height:65px" href="#" class="image waves-effect">
+              <img src="img/user_business_female.png" style="margin-top:1px" width=60 height=60>
+            </a>
+          </li>
+          <li>
+            <a style="height:65px" href="#" class="image waves-effect">
+              <img src="img/user_business_male_white.png" style="margin-top:1px" width=60 height=60>
+            </a>
+          </li>
+          <li>
+            <a style="height:65px" href="#" class="image waves-effect">
+              <img src="img/user_worker_male.png" style="margin-top:1px" width=60 height=60>
+            </a>
+          </li>
+        </ul>
+        <!--Right alligned objects-->
+        <ul id="nav-mobile" class="right">
+          <li>
+            <a href="#" style="height:65px; font-size:20px" class="transparent tooltipped waves-effect" data-delay="50"
+             data-tooltip="Your currency">100<i class="large material-icons right">attach_money</i></a>
+          </li>
+          <li>
+            <a class="btn-floating btn-large waves-effect transparent modal-trigger tooltipped" data-position="bottom"
+             data-delay="50" data-tooltip="Click to create a task" href="#modal1"><i class="large material-icons">add</i></a>
+          </li>
+          <li>
+            <a href="#" class="btn-floating btn-large dropdown-button waves-effect transparent tooltipped"
+             data-activates="dropdownSettings" data-position="bottom" data-delay="50" data-tooltip="Settings"><i class="large material-icons">build</i></a>
+          </li>
+          <li>
+            <a href="start.html" class="btn-floating btn-large waves-effect transparent tooltipped" data-position="bottom"
+             data-delay="50" data-tooltip="Logout"><i class="large material-icons">power_settings_new</i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="col s12 center text-accent-1">
+              <h4>Create Task</h4>
+              <div class="divider"></div>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">assignment</i>
+              <input id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">Task name</label>
+            </div>
+            <i class="material-icons left">alarm</i>
+            <div class="datepicker col s6">
+              <input id="idate" type="text" class="datepicker validate">
+              <label for="idate">Fullfill Date</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">mode_edit</i>
+              <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+              <label for="icon_prefix2">Description</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="btn modal-action <modal-close></modal-close> waves-effect waves-green red darken-2 right">
+        Submit<i class="material-icons right">send</i></a>
+      <a href="#!" class="btn modal-action modal-close waves-effect waves-green red lighten-1 left">
+        Cancel<i class="material-icons left">cancel</i></a>
+    </div>
+  </div>
+
+  <ul id='dropdownSettings' class='dropdown-content' style="margin-top:65px">
+    <li><a href="#!"><i class="material-icons">settings</i>General Settings</a></li>
+    <li class="divider"></li>
+    <li><a href="#!"><i class="material-icons">face</i>Family Overview</a></li>
+    <li class="divider"></li>
+    <li><a href="#!"><i class="material-icons">help</i>Help Menu</a></li>
+    <li class="divider"></li>
+    <li><a href="#!"><i class="material-icons">info</i>About</a></li>
+  </ul>
+
+  <ul style="width:65px; margin-left:15px" class="nav-side fixed transparent">
+    <li>
+      <a style="width:65px; height:65px; margin-bottom:15px; margin-top:75px" href="mat.html"
+      class="btn-floating btn-large waves-effect transparent tooltipped" data-position="right" data-delay="50" data-tooltip="Task list" href="#">
+            <i class="large material-icons">assignment</i></a>
+      </a>
+    </li>
+    <li>
+      <a style="width:65px; height:65px; margin-bottom:15px" href="reward.html"
+      class="btn-floating btn-large waves-effect transparent tooltipped" data-position="right" data-delay="50" data-tooltip="Rewards" href="#">
+            <i class="large material-icons">shopping_cart</i></a>
+      </a>
+    </li>
+    <li>
+      <a style="width:65px; height:65px; margin-bottom:15px" href="wishChild.html"
+      class="btn-floating btn-large waves-effect transparent tooltipped" data-position="right" data-delay="50" data-tooltip="Wishlist Child" href="#">
+            <i class="large material-icons">format_list_bulleted</i></a>
+      </a>
+    </li>
+    <li>
+      <a style="width:65px; height:65px; margin-bottom:15px" href="wishParent.html"
+      class="btn-floating btn-large waves-effect transparent tooltipped" data-position="right" data-delay="50" data-tooltip="Wishlist Parent" href="#">
+            <i class="large material-icons">format_list_bulleted</i></a>
+      </a>
+    </li>
+  </ul>
+
+  <a style="margin-top:20px; margin-left:90px" class="btn-floating btn-large waves-effect orange lighten-1 modal-trigger tooltipped" data-position="bottom"
+   data-delay="50" data-tooltip="Add wish" href="#modalAddWish"><i class="large material-icons">border_color</i></a>
+
+  <div style="margin-left:80px" class="row">
+      <div class="col s12 m6 l6">
+        <div class="card orange darken-4">
+          <div class="card-content white-text">
+            <a href="#" class="btn-floating waves-effect transparent right"><i class="material-icons right">delete</i></a>
+            <a href="#" class="btn-floating waves-effect transparent right"><i class="material-icons right">mode_edit</i></a>
+            <span class="card-title">New Phone</span>
+            <p>Samsung or LG..</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m6 l6">
+          <div class="card green darken-4">
+            <div class="card-content white-text">
+              <a href="#" class="btn-floating waves-effect transparent right"><i class="material-icons right">delete</i></a>
+              <a href="#" class="btn-floating waves-effect transparent right"><i class="material-icons right">mode_edit</i></a>
+              <span class="card-title">Big birthday Cake</span>
+              <p>Chocolate would be great!</p>
+          </div>
+        </div>
+      </div>
+
+      <div style=""class="row">
+          <div class="col s12 m6 l6">
+            <div class="card red darken-4">
+              <div class="card-content white-text">
+                <a href="#" class="btn-floating waves-effect transparent right"><i class="material-icons right">delete</i></a>
+                <a href="#" class="btn-floating waves-effect transparent right"><i class="material-icons right">mode_edit</i></a>
+                <span class="card-title">A voucher for the Shopping-Mall</span>
+                <p>At least 20€, please!</p>
+            </div>
+          </div>
+        </div>
+
+        <div style=""class="row">
+            <div class="col s12 m6 l6">
+              <div class="card blue darken-4">
+                <div class="card-content white-text">
+                  <a href="#" class="btn-floating waves-effect transparent right"><i class="material-icons right">delete</i></a>
+                  <a href="#" class="btn-floating waves-effect transparent right"><i class="material-icons right">mode_edit</i></a>
+                  <span class="card-title">New Laptop for School</span>
+                  <p>Should be really fast!</p>
+              </div>
+            </div>
+          </div>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="materialize.min.js"></script>
+</body>
+
+</html>
