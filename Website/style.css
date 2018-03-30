@@ -4153,6 +4153,7 @@ nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .inpu
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none
+  color:#ff9900
 }
 
 nav .input-field label {
@@ -5370,7 +5371,7 @@ button.btn-floating {
   margin: auto;
   overflow-y: auto;
   border-radius: 2px;
-  will-change: top, opacity
+  will-change: top;
 }
 
 @media only screen and (max-width: 992px) {
@@ -5737,13 +5738,13 @@ input:not([type]):disabled+label, input:not([type])[readonly="readonly"]+label, 
 }
 
 input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #26a69a;
-  -webkit-box-shadow: 0 1px 0 0 #26a69a;
-  box-shadow: 0 1px 0 0 #26a69a
+  border-bottom: 1px solid #ff9900;
+  -webkit-box-shadow: 0 1px 0 0 #ff9900;
+  box-shadow: 0 1px 0 0 #ff9900
 }
 
 input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=url]:not(.browser-default):focus:not([readonly])+label, input[type=time]:not(.browser-default):focus:not([readonly])+label, input[type=date]:not(.browser-default):focus:not([readonly])+label, input[type=datetime]:not(.browser-default):focus:not([readonly])+label, input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label, input[type=number]:not(.browser-default):focus:not([readonly])+label, input[type=search]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
-  color: #26a69a
+  color: #ff9900
 }
 
 input:not([type]).validate+label, input[type=text]:not(.browser-default).validate+label, input[type=password]:not(.browser-default).validate+label, input[type=email]:not(.browser-default).validate+label, input[type=url]:not(.browser-default).validate+label, input[type=time]:not(.browser-default).validate+label, input[type=date]:not(.browser-default).validate+label, input[type=datetime]:not(.browser-default).validate+label, input[type=datetime-local]:not(.browser-default).validate+label, input[type=tel]:not(.browser-default).validate+label, input[type=number]:not(.browser-default).validate+label, input[type=search]:not(.browser-default).validate+label, textarea.materialize-textarea.validate+label {
@@ -5856,7 +5857,7 @@ input:not([type])+label:after, input[type=text]:not(.browser-default)+label:afte
 }
 
 .input-field .prefix.active {
-  color: #26a69a
+  color: #ff9900 !important
 }
 
 .input-field .prefix~input, .input-field .prefix~textarea, .input-field .prefix~label, .input-field .prefix~.validate~label, .input-field .prefix~.autocomplete-content {
@@ -6031,11 +6032,11 @@ textarea.materialize-textarea.validate+label:not(.label-icon).active {
 }
 
 [type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after {
-  border: 2px solid #26a69a
+  border: 2px solid #ff9900
 }
 
 [type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
-  background-color: #26a69a
+  background-color: #ff9900
 }
 
 [type="radio"]:checked+label:after {
@@ -6152,8 +6153,8 @@ form p:last-child {
   height: 22px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
-  border-right: 2px solid #26a69a;
-  border-bottom: 2px solid #26a69a;
+  border-right: 2px solid #ff9900;
+  border-bottom: 2px solid #ff9900;
   -webkit-transform: rotate(40deg);
   transform: rotate(40deg);
   -webkit-backface-visibility: hidden;
@@ -6174,7 +6175,7 @@ form p:last-child {
   height: 22px;
   border-top: none;
   border-left: none;
-  border-right: 2px solid #26a69a;
+  border-right: 2px solid #ff9900;
   border-bottom: none;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
@@ -6242,8 +6243,8 @@ form p:last-child {
   top: 0;
   width: 20px;
   height: 20px;
-  border: 2px solid #26a69a;
-  background-color: #26a69a;
+  border: 2px solid #ff9900;
+  background-color: #ff9900;
   z-index: 0
 }
 
@@ -6255,8 +6256,8 @@ form p:last-child {
 
 [type="checkbox"].filled-in.tabbed:checked:focus+label:after {
   border-radius: 2px;
-  background-color: #26a69a;
-  border-color: #26a69a
+  background-color: #ff9900;
+  border-color: #ff9900
 }
 
 [type="checkbox"].filled-in:disabled:not(:checked)+label:before {

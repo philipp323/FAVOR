@@ -1,16 +1,18 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAVOR</title>
   <style>
     p {
       line-height: 2rem;
+      font-size:16px
     }
 
     .parallax-container {
@@ -58,12 +60,25 @@
     }
 
     .cardHover:hover {
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+      box-shadow: 0 14px 28px rgba(4, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     }
 
     .card .card-contentPicture {
       padding: 5px;
       display: flex
+    }
+
+    .registerBtnHover{
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    }
+
+    .registerBtnHover:hover{
+        box-shadow: 0 14px 28px rgba(250, 150, 0, 0.99), 0 50px 50px rgba(0, 0, 0, 0.22);
+    }
+
+    .pictureText{
+      text-shadow: 2px 2px rgba(0, 0, 0, 0.50)
     }
   </style>
 </head>
@@ -71,26 +86,46 @@
 <body style="background-color:white; background-image:initial">
   <div class="navbar-fixed">
     <nav class="white" role="navigation">
+
       <div class="nav-wrapper container">
-        <a id="logo-container" href="start.html" class="brand-logo orange-text">FAVOR</a>
+        <a id="logo-container" href="start.html" class="orange-text hide-on-med-and-down" style="font-size:30px">FAVOR</a>
         <ul class="right">
-          <li><a lang="en" href="mat.html" class="orange-text">Sign in</a> <a lang="de" href="mat.html" class="orange-text">Einloggen</a></li>
+          <li><a lang="en" href="#modalLogin" class="orange-text waves-effect modal-trigger" style="margin-bottom:2px">Sign in</a>
+              <a lang="de" href="#modalLogin" class="orange-text waves-effect modal-trigger" style="margin-bottom:2px">Einloggen</a></li>
+          <li><a class="dropdown-button waves-effect orange-text" style="margin-bottom:2px"
+           data-activates='dropdownNavigation'><i class="large material-icons">menu</i></a></li>
         </ul>
 
       </div>
     </nav>
   </div>
 
+  <ul id='dropdownNavigation' class='dropdown-content' style="margin-top:65px">
+    <li><a href="#"><i class="material-icons orange-text">home</i>Home</a></li>
+    <li class="divider"></li>
+    <li><a lang="en" href="#features"><i class="material-icons orange-text">face</i>Features</a>
+        <a lang="de" href="#features"><i class="material-icons orange-text">face</i>Funktionalitäten</a>
+    </li>
+    <li class="divider"></li>
+    <li><a lang="en" href="#footer"><i class="material-icons orange-text">email</i>Footer</a>
+        <a lang="de" href="#footer"><i class="material-icons orange-text">email</i>Fußzeile</a>
+    </li>
+    <li class="divider"></li>
+    <li><a lang="en" id="switch-lang"><i class="material-icons orange-text">language</i>Language</a>
+        <a lang="de" id="switch-langSecond"><i class="material-icons orange-text">language</i>Sprache</a>
+    </li>
+  </ul>
+
   <div id="index-banner" class="parallax-container" style="height:678px">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center text-lighten-2 orange-text">FAVOR</h1>
+        <h1 class="header center text-lighten-2 orange-text" style="text-shadow: 1.5px 1.5px rgba(250, 150, 0, 0.80);">FAVOR</h1>
         <div class="row center">
-          <h5 lang="en" class="header col s12 light">Organize - Your - Family!</h5> <h5 lang="de" class="header col s12 light">Organisiere - deine - Familie!</h5>
+          <h4 lang="en" class="header col s12 light" style="text-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.30);">Organize - Your - Family!</h4> <h4 lang="de" class="header col s12 light" style="text-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.50);">Organisiere - deine - Familie!</h4>
         </div>
         <div class="row center">
-          <a lang="en" href="#" id="register-button" class="btn-large waves-effect waves-light orange lighten-1">Get Started</a> <a lang="de" href="#" id="register-button" class="btn-large waves-effect waves-light orange lighten-1">Los geht's!</a>
+          <a lang="en" href="#modalLogin" id="register-button" class="btn-large waves-effect waves-light orange lighten-1 cardHover modal-trigger">Get Started</a> <a lang="de" href="#modalLogin" id="register-button" class="btn-large waves-effect waves-light orange lighten-1 modal-trigger">Los geht's!</a>
         </div>
         <br><br>
 
@@ -110,7 +145,7 @@
             <h2 class="center orange-text"><i class="material-icons large">group</i></h2>
             <h5 class="center">Together</h5>
 
-            <p class="light center">Families are facing hard times because of the technical revolution, feeling connected is important, and easy if everybodies using their phones, why shouldn't it be possible to organize all work that have to be done in one single website?</p>
+            <p class="center">Families are facing hard times because of the technical revolution, feeling connected is important, and easy if everybodies using their phones, why shouldn't it be possible to organize all work that have to be done in one single website?</p>
           </div>
         </div>
 
@@ -140,19 +175,20 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h4 class="header col s12 white-text lighten-3">A modern way to organize your family and getting things done!</h4>
+          <h4 lang="en" class="header col s12 white-text lighten-3 pictureText">A modern way to organize your family and getting things done!</h4>
+          <h4 lang="de" class="header col s12 white-text lighten-3 pictureText">Ein moderner Weg deine Familie zu organisieren und Dinge zu erledigen!</h4>
         </div>
       </div>
     </div>
     <div class="parallax"><img src="img/family-tablet-1.jpg" alt="Second Picture"></div>
   </div>
 
-  <div class="container">
+  <div class="container" id="features">
     <div class="section">
 
       <div class="row">
         <div class="header col s12">
-          <h4>Features</h4>
+          <h4 lang="en">Features</h4> <h4 lang="de">Funktionalitäten</h4>
         </div>
 
 
@@ -162,11 +198,14 @@
             <div class="card-tabs">
               <ul class="tabs tabs-fixed-width orange lighten-1">
                 <li class="tab"><a href="#test1" class="active">Info</a></li>
-                <li class="tab"><a href="#test2">Picture</a></li>
+                <li class="tab"><a lang="en" href="#test2">Picture</a><a lang="de" href="#test2">Bild</a></li>
               </ul>
             </div>
             <div class="orange white-text">
-              <div id="test1" class="card-content" style="height:100%; width:100%"><span class="card-title">Tasks</span>Creating and Fulfilling tasks is easy, many different setting possibilities are providing a chance to create a task that completely fits your needs and is providing the informaton somebody needs.</div>
+              <div id="test1" class="card-content" style="height:100%; width:100%">
+                <span lang="en" class="card-title">Tasks</span> <span lang="de" class="card-title">Aufgaben</span>
+                 Creating and Fulfilling tasks is easy, many different setting possibilities are providing a chance
+                 to create a task that completely fits your needs and is providing the informaton somebody needs.</div>
               <div id="test2" class="card-contentPicture"><img class="materialboxed" data-caption="The task view" width="100%" height="100%" src="img/reward.png"></div>
             </div>
           </div>
@@ -179,11 +218,14 @@
             <div class="card-tabs">
               <ul class="tabs tabs-fixed-width orange lighten-1">
                 <li class="tab"><a href="#test3" class="active">Info</a></li>
-                <li class="tab"><a href="#test4">Picture</a></li>
+                <li class="tab"><a lang="en" href="#test4">Picture</a><a lang="de" href="#test4">Bild</a></li>
               </ul>
             </div>
             <div class="orange darken-1 white-text">
-              <div id="test3" class="card-content" style="height:100%; width:100%"><span class="card-title">Wishes</span>The younger parts of the family just wants to wish for something? Sure they can, just write down the wish on the website and the parents, aunts or grandparents can make this wish come true!</div>
+              <div id="test3" class="card-content" style="height:100%; width:100%">
+                <span lang="en" class="card-title">Wishes</span> <span lang="de" class="card-title">Wünsche</span>
+                 The younger parts of the family just wants to wish for something? Sure they can, just write down the wish
+                 on the website and the parents, aunts or grandparents can make this wish come true!</div>
               <div id="test4" class="card-contentPicture"><img class="materialboxed" data-caption="The reward view" width="100%" height="100%" src="img/reward.png"></div>
             </div>
           </div>
@@ -194,11 +236,14 @@
             <div class="card-tabs">
               <ul class="tabs tabs-fixed-width orange lighten-1">
                 <li class="tab"><a href="#test5" class="active">Info</a></li>
-                <li class="tab"><a href="#test6">Picture</a></li>
+                <li class="tab"><a lang="en" href="#test6">Picture</a><a lang="de" href="#test6">Bild</a></li>
               </ul>
             </div>
             <div class="orange darken-2 white-text">
-              <div id="test5" class="card-content" style="height:100%; width:100%"><span class="card-title">Rewards</span>Parents, aunts or grandparents can look at the wishes wrote down by the children and converting these into rewards, they can choose how much points they need to gather for claiming the reward.</div>
+              <div id="test5" class="card-content" style="height:100%; width:100%">
+                <span lang="en" class="card-title">Rewards</span>  <span lang="de" class="card-title">Belohnungen</span>
+                 Parents, aunts or grandparents can look at the wishes wrote down by the children and converting
+                 these into rewards, they can choose how much points they need to gather for claiming the reward.</div>
               <div id="test6" class="card-contentPicture"><img class="materialboxed" data-caption="The reward view" width="100%" height="100%" src="img/reward.png"></div>
             </div>
           </div>
@@ -210,11 +255,14 @@
             <div class="card-tabs">
               <ul class="tabs tabs-fixed-width orange lighten-1">
                 <li class="tab"><a href="#test7" class="active">Info</a></li>
-                <li class="tab"><a href="#test8">Picture</a></li>
+                <li class="tab"><a lang="en" href="#test8">Picture</a><a lang="de" href="#test8">Bild</a></li>
               </ul>
             </div>
             <div class="orange white-text">
-              <div id="test7" class="card-content" style="height:100%; width:100%"><span class="card-title">Points</span>A completely customizable currency which everybody can earn by fulfilling tasks, the creator decides how much somebody will get for fulfilling the task.</div>
+              <div id="test7" class="card-content" style="height:100%; width:100%">
+                <span lang="en" class="card-title">Points</span> <span lang="de" class="card-title">Punkte</span>
+                 A completely customizable currency which everybody can earn by fulfilling tasks,
+                 the creator decides how much somebody will get for fulfilling the task.</div>
               <div id="test8" class="card-contentPicture"><img class="materialboxed" data-caption="The reward view" width="100%" height="100%" src="img/reward.png"></div>
             </div>
           </div>
@@ -225,12 +273,13 @@
             <div class="card-tabs">
               <ul class="tabs tabs-fixed-width orange lighten-1">
                 <li class="tab"><a href="#test9" class="active">Info</a></li>
-                <li class="tab"><a href="#test10">Picture</a></li>
+                <li class="tab"><a lang="en" href="#test10">Picture</a><a lang="de" href="#test10">Bild</a></li>
               </ul>
             </div>
             <div class="orange darken-1 white-text">
-              <div id="test9" class="card-content" style="height:100%; width:100%"><span class="card-title">
-                Overview</span>One small look on the screen of your phone in a crowded street informs you about what
+              <div id="test9" class="card-content" style="height:100%; width:100%">
+                <span lang="en" class="card-title">Overview</span> <span lang="de" class="card-title">Übersicht</span>
+                 One small look on the screen of your phone in a crowded street informs you about what
                  is probably to do at home or somebody just completed for you.</div>
               <div id="test10" class="card-contentPicture"><img class="materialboxed" data-caption="The reward view" width="100%" height="100%" src="img/reward.png"></div>
             </div>
@@ -242,11 +291,14 @@
             <div class="card-tabs">
               <ul class="tabs tabs-fixed-width orange lighten-1">
                 <li class="tab"><a href="#test11" class="active">Info</a></li>
-                <li class="tab"><a href="#test12">Picture</a></li>
+                <li class="tab"><a lang="en" href="#test12">Picture</a><a lang="de" href="#test12">Bild</a></li>
               </ul>
             </div>
             <div class="orange darken-2 white-text">
-              <div id="test11" class="card-content" style="height:100%; width:100%"><span class="card-title">Fun</span>Fully customizable background, profile pictures and symbols, perfect for creating an environment, which everybody likes to use and work with.</div>
+              <div id="test11" class="card-content" style="height:100%; width:100%">
+                <span lang="en" class="card-title">Fun</span> <span lang="de" class="card-title">Spaß</span>
+                 Fully customizable background, profile pictures and symbols, perfect for creating an environment,
+                 which everybody likes to use and work with.</div>
               <div id="test12" class="card-contentPicture"><img class="materialboxed" data-caption="The reward view" width="100%" height="100%" src="img/reward.png"></div>
             </div>
           </div>
@@ -262,68 +314,223 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 lang="en" class="header col s12 strong">Everbody can use it, everybody can do it!</h5> <h5 lang="de" class="header col s12 strong">Jeder kann es benutzen, jeder kann es schaffen!</h5>
+          <h4 lang="en" class="header col s12 strong pictureText">Everbody can use it, everybody can do it!</h4> <h4 lang="de" class="header col s12 strong pictureText">Jeder kann es benutzen, jeder kann es schaffen!</h4>
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="img/family-walking-clipart.png" alt="Third Picture"></div>
+    <div class="parallax"><img src="img/walking-family.jpg" alt="Third Picture"></div>
   </div>
 
-  <div class="container">
+
+  <div class="container" id="contact">
     <div class="section">
 
       <div class="row">
-        <div class="header col s12">
-          <h4 lang="en">Contact</h4>
-          <h4 lang="de">Kontakt</h4>
+        <div class="header col s12 center grey-text" style="font-weight: normal">
+          <h1 lang="en">Ready to get started?</h1> <h1 lang="de">Bereit loszulegen?</h1>
+          <h5 lang="en">FAVOR is completely free for everyone!</h5> <h5 lang="de">FAVOR ist gratis für jeden!</h5>
+          <br>
+          <div id="register-button"></div>
+            <a lang="en" href="#modalLogin" class="btn-large waves-effect waves-light orange lighten-1 registerBtnHover modal-trigger">Free-Register</a> <a lang="de" href="#modalLogin" class="btn-large waves-effect waves-light orange lighten-1 registerBtnHover modal-trigger">Gratis-Registrierung</a>
         </div>
       </div>
     </div>
   </div>
-  <footer class="page-footer orange">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 lang="en" class="white-text">Our Product</h5> <h5 lang="de" class="white-text">Unser Produkt</h5>
-          <p lang="en" class="grey-text text-lighten-4">FAVOR is going to completely change the life of families. <br> Because all people should enjoy the time spend with their families.<br> Try it out for free!</p>
-          <p lang="de" class="grey-text text-lighten-4">FAVOR wird das Leben von Familien komplett verändern. <br> Weil alle Leute sollten die Zeit die sie mit ihrer Familie verbringen, geniesen. <br> Probier es aus, es ist gratis aber nicht umsonst!</p>
+
+    <footer class="page-footer orange">
+      <div class="container" id="footer">
+          <div class="row">
+            <div class="col l12 s12 social center">
+              <h5 class="white-text center">LET'S SOCIALIZE</h5>
+              <p class="white-text center">We're very social and we'd love to hear from you! Feel free to send us an email, follow us on Twitter and join us on Instagram or Youtube.</p>
+              <a href="mailto:email@address.com" target="_blank"><i class="fa fa-envelope medium white-text" style="font-size:55px;"></i></a>
+              <a href="#github" target="_blank"><i class="fa fa-github medium white-text"></i></a>
+              <a href="#twitter" target="_blank"><i class="fa fa-twitter medium white-text"></i></a>
+              <a href="#instagram" target="_blank"><i class="fa fa-instagram medium white-text"></i></a>
+              <a href="#youtube" target="_blank"><i class="fa fa-youtube-play medium white-text"></i></a>
+              <a href="#reddit" target="_blank"><i class="fa fa-reddit medium white-text" style="font-size:53px;"></i></a>
+            </div>
+          </div>
+
+          <div class="divider no-margin"></div>
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 lang="en" class="white-text">Our Product</h5> <h5 lang="de" class="white-text">Unser Produkt</h5>
+            <p lang="en" class="grey-text text-lighten-4">FAVOR is going to completely change the life of families. <br> Because all people should enjoy the time spend with their families.<br> Try it out for free!</p>
+            <p lang="de" class="grey-text text-lighten-4">FAVOR wird das Leben von Familien komplett verändern. <br> Weil alle Leute sollten die Zeit die sie mit ihrer Familie verbringen, geniesen. <br> Probier es aus, es ist gratis aber nicht umsonst!</p>
 
 
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a lang="en" class="white-text" href="#!">Tutorial</a> <a lang="de" class="white-text" href="#!">Anleitung</a></li>
-            <li><a class="white-text disable" href="">HTL-Leonding</a></li>
-            <li><a lang="en" class="white-text" href="#!">History</a> <a lang="de" class="white-text" href="#!">Geschichte</a></li>
-            <li><a lang="en" class="white-text" href="#!">About</a> <a lang="de" class="white-text" href="#!">Über uns</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 lang="en" class="white-text">Connect</h5>
-          <h5 lang="de" class="white-text">Verbinden</h5>
-          <ul>
-            <li><a lang="en" class="white-text" href="#!">Login</a> <a lang="de" class="white-text" href="#!">Einloggen</a> </li>
-            <li><a lang="en" class="white-text" href="#!">Register</a> <a lang="de" class="white-text" href="#!">Registrieren</a> </li>
-            <li><a class="white-text" href="#!">GitHub</a></li>
-            <li><a class="white-text" href="http://materializecss.com/">Materialize</a></li>
-            <li><a class="white-text" href="http://www.heropatterns.com/">HeroPatterns</a></li>
-          </ul>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a lang="en" class="white-text" href="#!">Tutorial</a> <a lang="de" class="white-text" href="#!">Anleitung</a></li>
+              <li><a class="white-text disable" href="">HTL-Leonding</a></li>
+              <li><a lang="en" class="white-text" href="#!">History</a> <a lang="de" class="white-text" href="#!">Geschichte</a></li>
+              <li><a lang="en" class="white-text" href="#!">About</a> <a lang="de" class="white-text" href="#!">Über uns</a></li>
+            </ul>
+          </div>
+          <div class="col l3 s12">
+            <h5 lang="en" class="white-text">Connect</h5>
+            <h5 lang="de" class="white-text">Verbinden</h5>
+            <ul>
+              <li><a lang="en" class="white-text modal-trigger" href="#modalLogin">Login</a> <a lang="de" class="white-text modal-trigger" href="#modalLogin">Einloggen</a> </li>
+              <li><a lang="en" class="white-text modal-trigger" href="#modalLogin">Register</a> <a lang="de" class="white-text modal-trigger" href="#modalLogin">Registrieren</a> </li>
+              <li><a class="white-text" href="#!">GitHub</a></li>
+              <li><a class="white-text" href="http://materializecss.com/">Materialize</a></li>
+              <li><a class="white-text" href="http://www.heropatterns.com/">HeroPatterns</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+
     <div class="footer-copyright">
       <div class="container">
-        <button id="switch-lang" class="btn-floating transparent waves-effect right"><i class="material-icons">language</i></button>
-        <p lang="en">Made by FAVOR-Group</p>
-        <p lang="de">Ein Produkt der FAVOR-Gruppe</p>
+        <span lang="en">Made by FAVOR-Group</span> <span lang="de">Made by FAVOR-Gruppe</span>
       </div>
     </div>
   </footer>
 
-  <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="materialize.min.js"></script>
+  <!--Functionalities-->
+
+    <!--Login/Register-->
+    <style>
+
+      .no-padding-bottom {padding-bottom:0px !important}
+
+      .no-padding {padding:0px !important}
+
+      .social i {
+        margin: 0 20px 0 0;
+        opacity: 0.5;
+        color: #fff;
+        transition: all 0.2s ease-out;
+      }
+      .social i:hover{
+        opacity: 1;
+      }
+
+      .social p{
+        width: 50%;
+        margin: 0 auto 40px;
+        margin-bottom:25px;
+      }
+      .confirmation-tabs-btn
+      {
+	      position: absolute;
+      }
+
+      .modal {
+          max-height: calc(100% - 100px);
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+      }
+
+
+      .tabs .tab a{
+            color:white;
+        }
+
+        .tabs .tab a:hover {
+            background-color:rgb(255, 160, 0);
+            color:white;
+        }
+
+        .tabs .tab a.active {
+            background-color:rgb(255, 140, 0);
+            color:white;
+        }
+
+        .tabs .indicator {
+            background-color:white;
+        }
+    </style>
+
+<div class="row">
+  <div id="modalLogin" class="modal col l4 m6 s12 offset-l4 offset-m3 no-padding">
+    <ul class="tabs orange">
+      <li class="tab col s6"><a class="white-text active" href="#login">login</a></li>
+      <li class="tab col s6"><a class="white-text" href="#register">register</a></li>
+    </ul>
+    <div class="modal-content">
+
+      <div id="login" class="col s12">
+        <form class="col s12">
+          <div class="form-container col s12">
+            <h3 class="black-text center">Hello</h3>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <br>
+            <center>
+              <button class="btn waves-effect waves-light orange" type="submit" name="action">Connect</button>
+              <br>
+              <a href="" style="font-size:13px;" lang="en">Forgotten password?</a><a href="" style="font-size:13px;" lang="de">Passwort vergessen?</a>
+            </center>
+          </div>
+        </form>
+      </div>
+      <div id="register" class="col s12">
+        <form class="col s12">
+          <div class="form-container col s12">
+            <h3 class="form-text center">Welcome</h3>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password-confirm" type="password" class="validate">
+                <label for="password-confirm">Password Confirmation</label>
+              </div>
+            </div>
+            <center>
+              <button class="btn waves-effect waves-light orange" type="submit" name="action">Submit</button>
+              <br>
+              <a class="center black-text" style="font-size:13px;" lang="en">Free-Register</a>
+              <a class="center black-text" style="font-size:13px;" lang="de">Gratis-Registrierung</a>
+            </center>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="materialize.min.js"></script>
 </body>
 
 </html>
