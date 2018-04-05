@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <html lang="en">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>FAVOR</title>
+  <style>
+
+    p {
+      line-height: 2rem;
+    }
+    body{
+      background-color: white;
+      background-image: initial;
+    }
+    .parallax-container {
+      min-height: 380px;
+      line-height: 0;
+      height: auto;
+      color: rgba(255, 255, 255, .9);
+    }
+
+    .parallax-container .section {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 992px) {
+      .parallax-container .section {
+        position: absolute;
+        top: 40%;
+      }
+      #index-banner .section {
+        top: 10%;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      #index-banner .section {
+        top: 0;
+      }
+    }
+
+    .icon-block {
+      padding: 0 15px;
+    }
+
+    .icon-block .material-icons {
+      font-size: inherit;
+    }
+
+    footer.page-footer {
+      margin: 0;
+    }
+
+    .cardHover {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    }
+
+    .cardHover:hover {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+
+    .card .card-contentPicture {
+      padding: 5px;
+      display: flex
+    }
+  </style>
+</head>
+
+
+<body>
+<div class="navbar-fixed">
+  <nav class="white">
+    <div class="nav-wrapper container">
+      <ul>
+        <li><a href="#" style="margin-left: 10px"class="orange-text">Home</a></li>
+        <li><a href="#" style="margin-left: 10px"class="orange-text">Us</a></li>
+        <li><a href="#school" style="margin-left: 10px"class="orange-text">School</a></li>
+        <li><a href="#else" style="margin-left: 10px"class="orange-text">Else</a></li>
+      </ul>
+      <a href="start.html"class="brand-logo orange-text right">zu FAVOR</a>
+    </div>
+  </nav>
+</div>
+
+<div id="us"class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container center">
+      <div class="row">
+        <h2 class="header col s12 orange-text"><i class="large material-icons">group</i></h2>
+        <h4 class="header col s12 orange-text">This is us</h4>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><img src="img/learning.png" alt="yep"></div>
+</div>
+
+<div class="conatiner">
+  <div class"section" style="margin-left: 25%">
+      <div class="row">
+        <div class="col s2 m2 l4">
+            <div class="card orange">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="img/user_business_male.png">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator white-text">Philipp<i class="material-icons right">expand_more</i></span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title white-text">Philipp<i class="material-icons right">close</i></span>
+                  <p>Work in Progress</p>
+                </div>
+            </div>
+          </div>
+          <div class="col s2 m2 l4">
+          <div class="card orange">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="img/user_business_male.png">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator white-text">Alex<i class="material-icons right">expand_more</i></span>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title white-text text-darken-4">Alex<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<div id="school" class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row center">
+        <h2 class="col s12 orange-text"><i class="large material-icons">school</i></h2>
+        <h4 class="col s12 orange-text">HTBLA Leonding</h4>
+      </div>
+    </div>
+    </div>
+    <div class="parallax"><img src="img/learning.png" alt="Yeeee"></div>
+  </div>
+
+
+<div class="containter">
+  <div class="section">
+    <div class="orange-text darken-2">
+        <div class="center">
+          <br/>
+          <p>The HTBLA Leonding is a highly appreciated school where you can attend different computer related branches,<br/> It was founded 1984 and its now a very good and well known School</p>
+          <h5>Computer science</h5>
+            <p>Here you will learn everything you need to know about progrmming, networking and other computer related stuff</p>
+          <h5>Media technology</h5>
+            <p>Here you will encounter Photoshop and Co.</p>
+          <h5>Electronics</h5>
+            <p>You always wanted to know how to work with your hands to build microchip-like object? Then this is your way to go</p>
+          <h5>Medical</h5>
+            <p>You will learn how to use and programm high-technical medical objects</p>
+
+          <h4>You want to visit us? Here we are</h4>
+
+             <div id="googleMap" style="height:400px;" ></div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<script>
+function myMap() {
+  myCenter=new google.maps.LatLng(48.2680404, 14.25254859999978);
+  var mapOptions= {
+    center:myCenter,
+    zoom:17, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+    var marker = new google.maps.Marker({
+      position: myCenter,
+  });
+  marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKShlpxSDe7Z4KZIrc6S1Fu9dJebg5D80&callback=myMap"></script>
+
+
+<div id="else" class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row center">
+        <h2 class="header col s12 orange-text"><i class="large material-icons">more</i></h2>
+        <h4 class="header col s12 orange-text">More Details coming</h4>
+      </div>
+    </div>
+    </div>
+    <div class=""><img src="img/user_business_male.png" alt="Yeee4"></div>
+</div>
+
+<div class="containter center">
+  <div class="section">
+      <div class="orange-text darken-2">
+        <div style="margin-left: 20px; margin-top: 10px">
+          <br/>
+          <h4>Thank You</h4>
+          <p>We are currently working on our website to improve your experience using FAVOR, <br/>
+            If you notice any bugs etc. please inform us about them so we can work on fixing them<br/>
+            Thank you for using FAVOR, you the customers are the reason we created this product.<br/>
+            With the idea of improving everyday life within a family and highly-motivated programmers<br/>
+            We realised our idea, with our special and unique reward system we want to motivate<br/>
+            children and young teenager to help with the household and in return they will get personalized<br/>
+            currency wich they can spend on personalized rewards.<br/></p>
+          <p>You want to contact us? You can emil us via our e-mail address, you can find it on our main page</p>
+          <p>
+          <a href="start.html" class="col s12 orange-text" style="margin-bottom: 10px"><h5>Main Page<i class="material-icons">arrow_forward</i></h5></a>
+          </p>
+          <br/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h4 class="header col s12 orange-text">"Wir behalten von unsern Studien am Ende doch nur das, was wir praktisch anwenden." - Johann Wolfgang von Goethe</h4>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="img/family-tablet-1.jpg" alt="helloworld"></img></div>
+  </div>
+
+<footer class="page-footer orange">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Team Bio</h5>
+        <p class="grey-text text-lighten-4">We are two students which are attending the HTL Leonding, our project Idea is improving the lives of families, more about us and our Project-History in About & History.</p>
+
+
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Links</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Tutorial</a></li>
+          <li><a href="https://www.google.com/maps/place/HTBLA+Leonding/@48.2682506,14.2525344,18z/data=!4m5!3m4!1s0x477396fb96f68367:0xf2b265395a736637!8m2!3d48.2684401!4d14.2515491" class="btn-floating transparent waves-green" target="_blank" style="margin-right:3px;"><i class="material-icons">location_on</i></a>
+            <a class="white-text disable" href="">HTL-Leonding</a>
+          </li>
+          <li><a class="white-text" href="#!">History</a></li>
+          <li><a class="white-text" href="#!">About</a></li>
+        </ul>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Connect</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Login</a></li>
+          <li><a class="white-text" href="#!">Register</a></li>
+          <li><a class="white-text" href="#!">GitHub</a></li>
+          <li><a class="white-text" href="http://materializecss.com/">Materialize</a></li>
+          <li><a class="white-text" href="http://www.heropatterns.com/">HeroPatterns</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      Made by Philipp Auinger
+    </div>
+  </div>
+</footer>
+
+
+</body>
+
+</html>
