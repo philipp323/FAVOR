@@ -98,7 +98,7 @@ footer.page-footer {
   position: absolute;
 }
 
-.modal {
+.modalLogin {
   max-height: calc(100% - 100px);
   position: fixed;
   top: 50%;
