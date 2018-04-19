@@ -2,90 +2,61 @@
 <html>
 
 <head>
-  <html lang="en">
+  <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="start.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>FAVOR</title>
-  <style>
 
-    p {
-      line-height: 2rem;
-    }
-    body{
-      background-color: white;
-      background-image: initial;
-    }
-    .parallax-container {
-      min-height: 380px;
-      line-height: 0;
-      height: auto;
-      color: rgba(255, 255, 255, .9);
-    }
+  <title>FAVOR</title>
 
-    .parallax-container .section {
-      width: 100%;
-    }
-
-    @media only screen and (max-width: 992px) {
-      .parallax-container .section {
-        position: absolute;
-        top: 40%;
-      }
-      #index-banner .section {
-        top: 10%;
-      }
-    }
-
-    @media only screen and (max-width: 600px) {
-      #index-banner .section {
-        top: 0;
-      }
-    }
-
-    .icon-block {
-      padding: 0 15px;
-    }
-
-    .icon-block .material-icons {
-      font-size: inherit;
-    }
-
-    footer.page-footer {
-      margin: 0;
-    }
-
-    .cardHover {
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-    }
-
-    .cardHover:hover {
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    }
-
-    .card .card-contentPicture {
-      padding: 5px;
-      display: flex
-    }
-  </style>
 </head>
 
 
 <body>
-<div class="navbar-fixed">
-  <nav class="white">
-    <div class="nav-wrapper container">
-      <ul>
-        <li><a href="#" style="margin-left: 10px"class="orange-text">Home</a></li>
-        <li><a href="#" style="margin-left: 10px"class="orange-text">Us</a></li>
-        <li><a href="#school" style="margin-left: 10px"class="orange-text">School</a></li>
-        <li><a href="#else" style="margin-left: 10px"class="orange-text">Else</a></li>
-      </ul>
-      <a href="index.html"class="brand-logo orange-text right">zu FAVOR</a>
-    </div>
-  </nav>
-</div>
+  <div class="navbar-fixed">
+    <nav class="white" role="navigation">
+
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="us.html" class="orange-text hide-on-med-and-down" style="font-size:30px">About us</a>
+        <ul class="right">
+          <li><a class="dropdown-button waves-effect orange-text" style="margin-bottom:2px"
+           data-activates='dropdownNavigation'><i class="large material-icons">menu</i></a></li>
+        </ul>
+
+      </div>
+    </nav>
+  </div>
+
+  <ul id='dropdownNavigation' class='dropdown-content' style="margin-top:65px">
+      <li><a lang="en" href="index.html"><i class="material-icons orange-text">home</i>Mainpage</a>
+          <a lang="de" href="index.html"><i class="material-icons orange-text">home</i>Hauptseite</a>
+      </li>
+    <li class="divider"></li>
+    <li><a href="#"><i class="material-icons orange-text">face</i>Team</a>
+    </li>
+    <li class="divider"></li>
+    <li><a lang="en" href="#school"><i class="material-icons orange-text">school</i>School</a>
+        <a lang="de" href="#school"><i class="material-icons orange-text">school</i>Schule</a>
+    </li>
+    <li class="divider"></li>
+    <li><a lang="en" href="#footer"><i class="material-icons orange-text">favorite</i>Closing-words</a>
+        <a lang="de" href="#footer"><i class="material-icons orange-text">favorite</i>Schlusswort</a>
+    </li>
+    <li class="divider"></li>
+    <li><a lang="en" href="#footer"><i class="material-icons orange-text">email</i>Footer</a>
+        <a lang="de" href="#footer"><i class="material-icons orange-text">email</i>Fußzeile</a>
+    </li>
+    <li class="divider"></li>
+    <li><a lang="en" id="switch-lang"><i class="material-icons orange-text">language</i>Language</a>
+        <a lang="de" id="switch-langSecond"><i class="material-icons orange-text">language</i>Sprache</a>
+    </li>
+  </ul>
+
 
 <div id="us"class="parallax-container valign-wrapper">
   <div class="section no-pad-bot">
@@ -102,7 +73,7 @@
 <div class="conatiner">
   <div class"section" style="margin-left: 25%">
       <div class="row">
-        <div class="col s2 m2 l4">
+        <div class="col s12 m2 l4">
             <div class="card orange">
                 <div class="card-image waves-effect waves-block waves-light">
                   <img class="activator" src="img/user_business_male.png">
@@ -136,19 +107,34 @@
 
 
 <div id="school" class="parallax-container valign-wrapper">
+  <div class="parallax"><img src="img/HTBLA_Leonding.jpg" alt="Leonding-School-Picture"></div>
   <div class="section no-pad-bot">
     <div class="container">
-      <div class="row center">
-        <h2 class="col s12 orange-text"><i class="large material-icons">school</i></h2>
-        <h4 class="col s12 orange-text">HTBLA Leonding</h4>
-      </div>
+    <div class="row center">
+      <h4 lang="en" class="header col s12 white-text lighten-3 pictureText light">HIGHER-TECHNICAL-COLLEGE-LEONDING</h4>
+      <h4 lang="de" class="header col s12 white-text lighten-3 pictureText light">HÖHERE-TECHNISCHE-LEHRANSTALT-LEONDING</h4>
     </div>
-    </div>
-    <div class="parallax"><img src="img/learning.png" alt="Yeeee"></div>
   </div>
+</div>
+</div>
 
+<div class="container" id="features">
+  <div class="section">
+    <div class="row">
+       <div class="col s12 m6">
+         <div class="card blue-grey darken-1">
+           <div class="card-content white-text">
+             <span class="card-title">Card Title</span>
+               <p>I am a very simple card. I am good at containing small bits of information.
+               I am convenient because I require little markup to use effectively.</p>
+           </div>
+         </div>
+       </div>
+     </div>
+  </div>
+</div>
 
-<div class="containter">
+<div class="container">
   <div class="section">
     <div class="orange-text darken-2">
         <div class="center">
@@ -164,11 +150,13 @@
             <p>You will learn how to use and programm high-technical medical objects</p>
 
           <h4>You want to visit us? Here we are</h4>
-
-             <div id="googleMap" style="height:400px;" ></div>
         </div>
       </div>
   </div>
+</div>
+
+<div class="parallax-container">
+  <div id="googleMap" style="height:400px;" ></div>
 </div>
 
 <script>
@@ -199,7 +187,6 @@ function myMap() {
       </div>
     </div>
     </div>
-    <div class=""><img src="img/user_business_male.png" alt="Yeee4"></div>
 </div>
 
 <div class="containter center">
@@ -225,57 +212,63 @@ function myMap() {
     </div>
   </div>
 
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h4 class="header col s12 orange-text">"Wir behalten von unsern Studien am Ende doch nur das, was wir praktisch anwenden." - Johann Wolfgang von Goethe</h4>
+  <footer class="page-footer orange">
+    <div class="container" id="footer">
+        <div class="row">
+          <div class="col l12 s12 social center">
+            <h5 class="white-text center">LET'S SOCIALIZE</h5>
+            <p lang="en" class="white-text center">We're very social and we'd love to hear from you! Feel free to send us an email, follow us on Twitter and join us on Instagram or Youtube.</p>
+            <p lang="de" class="white-text center">Wir würden uns freuen von Ihnen zu hören! Zögern Sie nicht uns eine Email zu schreiben, uns auf Twitter zu folgen oder uns auf Instagram oder Youtube beizutreten</p>
+            <a href="mailto:philipp-auinger@gmx.at" target="_blank"><i class="fa fa-envelope medium white-text" style="font-size:55px;"></i></a>
+            <a href="https://github.com/PhilippAuinger/FAVOR" target="_blank"><i class="fa fa-github medium white-text"></i></a>
+            <a href="#twitter" target="_blank"><i class="fa fa-twitter medium white-text"></i></a>
+            <a href="#instagram" target="_blank"><i class="fa fa-instagram medium white-text"></i></a>
+            <a href="#youtube" target="_blank"><i class="fa fa-youtube-play medium white-text"></i></a>
+            <a href="#reddit" target="_blank"><i class="fa fa-reddit medium white-text" style="font-size:53px;"></i></a>
+          </div>
+        </div>
+
+        <div class="divider no-margin"></div>
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 lang="en" class="white-text">Our Product</h5> <h5 lang="de" class="white-text">Unser Produkt</h5>
+          <p lang="en" class="grey-text text-lighten-4">FAVOR is going to completely change the life of families. <br> Because all people should enjoy the time spend with their families.<br> Try it out for free!</p>
+          <p lang="de" class="grey-text text-lighten-4">FAVOR wird das Leben von Familien komplett verändern. <br> Weil alle Leute sollten die Zeit die sie mit ihrer Familie verbringen, geniesen. <br> Probier es aus, es ist gratis aber nicht umsonst.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <!--<li><a lang="en" class="white-text" href="#!">Tutorial</a> <a lang="de" class="white-text" href="#!">Anleitung</a></li>-->
+            <li><a class="white-text disable" target="_blank" href="https://www.htl-leonding.at">HTL-Leonding</a></li>
+            <li><a lang="en" class="white-text modal-trigger" href="#historyModal">Website-History</a> <a lang="de" class="white-text modal-trigger" href="#historyModal">Website-Geschichte</a></li>
+            <li><a lang="en" class="white-text" href="us.html">About us</a> <a lang="de" class="white-text" href="us.html">Über uns</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 lang="en" class="white-text">Connect</h5>
+          <h5 lang="de" class="white-text">Verbinden</h5>
+          <ul>
+            <li><a lang="en" class="white-text modal-trigger" href="#modalLogin">Login</a> <a lang="de" class="white-text modal-trigger" href="#modalLogin">Einloggen</a> </li>
+            <li><a lang="en" class="white-text modal-trigger" href="#modalLogin">Register</a> <a lang="de" class="white-text modal-trigger" href="#modalLogin">Registrieren</a> </li>
+            <li><a class="white-text" target="_blank" href="https://github.com/">GitHub</a></li>
+            <li><a class="white-text" target="_blank" href="http://materializecss.com/">Materialize</a></li>
+            <li><a class="white-text" target="_blank" href="http://www.heropatterns.com/">HeroPatterns</a></li>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="img/family-tablet-1.jpg" alt="helloworld"></img></div>
-  </div>
 
-<footer class="page-footer orange">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">Team Bio</h5>
-        <p class="grey-text text-lighten-4">We are two students which are attending the HTL Leonding, our project Idea is improving the lives of families, more about us and our Project-History in About & History.</p>
-
-
-      </div>
-      <div class="col l3 s12">
-        <h5 class="white-text">Links</h5>
-        <ul>
-          <li><a class="white-text" href="#!">Tutorial</a></li>
-          <li><a href="https://www.google.com/maps/place/HTBLA+Leonding/@48.2682506,14.2525344,18z/data=!4m5!3m4!1s0x477396fb96f68367:0xf2b265395a736637!8m2!3d48.2684401!4d14.2515491" class="btn-floating transparent waves-green" target="_blank" style="margin-right:3px;"><i class="material-icons">location_on</i></a>
-            <a class="white-text disable" href="">HTL-Leonding</a>
-          </li>
-          <li><a class="white-text" href="#!">History</a></li>
-          <li><a class="white-text" href="#!">About</a></li>
-        </ul>
-      </div>
-      <div class="col l3 s12">
-        <h5 class="white-text">Connect</h5>
-        <ul>
-          <li><a class="white-text" href="#!">Login</a></li>
-          <li><a class="white-text" href="#!">Register</a></li>
-          <li><a class="white-text" href="#!">GitHub</a></li>
-          <li><a class="white-text" href="http://materializecss.com/">Materialize</a></li>
-          <li><a class="white-text" href="http://www.heropatterns.com/">HeroPatterns</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
   <div class="footer-copyright">
     <div class="container">
-      Made by Philipp Auinger
+      <span lang="en">Made in Austria</span> <span lang="de">Erstellt in Österreich</span>
     </div>
   </div>
 </footer>
 
-
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="materialize.min.js"></script>
 </body>
 
 </html>
