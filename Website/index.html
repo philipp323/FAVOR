@@ -16,12 +16,12 @@
 
 </head>
 
-<body style="background-color:white; background-image:initial">
+<body>
   <div class="navbar-fixed">
     <nav class="white" role="navigation">
 
       <div class="nav-wrapper container">
-        <a id="logo-container" href="start.html" class="orange-text hide-on-med-and-down" style="font-size:30px">FAVOR</a>
+        <a id="logo-container" href="index.html" class="orange-text hide-on-med-and-down" style="font-size:30px">FAVOR</a>
         <ul class="right">
           <li><a lang="en" href="#modalLogin" class="orange-text waves-effect modal-trigger" style="margin-bottom:2px">Sign in</a>
               <a lang="de" href="#modalLogin" class="orange-text waves-effect modal-trigger" style="margin-bottom:2px">Einloggen</a></li>
@@ -297,7 +297,7 @@
               <h5 class="white-text center">LET'S SOCIALIZE</h5>
               <p lang="en" class="white-text center">We're very social and we'd love to hear from you! Feel free to send us an email, follow us on Twitter and join us on Instagram or Youtube.</p>
               <p lang="de" class="white-text center">Wir würden uns freuen von Ihnen zu hören! Zögern Sie nicht uns eine Email zu schreiben, uns auf Twitter zu folgen oder uns auf Instagram oder Youtube beizutreten</p>
-              <a href="mailto:email@address.com" target="_blank"><i class="fa fa-envelope medium white-text" style="font-size:55px;"></i></a>
+              <a href="mailto:philipp-auinger@gmx.at" target="_blank"><i class="fa fa-envelope medium white-text" style="font-size:55px;"></i></a>
               <a href="https://github.com/PhilippAuinger/FAVOR" target="_blank"><i class="fa fa-github medium white-text"></i></a>
               <a href="#twitter" target="_blank"><i class="fa fa-twitter medium white-text"></i></a>
               <a href="#instagram" target="_blank"><i class="fa fa-instagram medium white-text"></i></a>
@@ -348,130 +348,129 @@
   <!--Functionalities-->
 
     <!--Login/Register-->
+  <div class="row no-padding-bottom orange marginDiv">
+    <div id="modalLogin" class="modal modalLogin col l4 m6 s12 offset-l4 offset-m3 no-padding">
+      <ul class="tabs orange">
+        <li class="tab col s6"><a class="white-text active" href="#login">login</a></li>
+        <li class="tab col s6"><a class="white-text" href="#register">register</a></li>
+      </ul>
+      <div class="modal-content">
 
-<div class="row no-padding-bottom orange">
-  <div id="modalLogin" class="modal col l4 m6 s12 offset-l4 offset-m3 no-padding">
-    <ul class="tabs orange">
-      <li class="tab col s6"><a class="white-text active" href="#login">login</a></li>
-      <li class="tab col s6"><a class="white-text" href="#register">register</a></li>
-    </ul>
-    <div class="modal-content">
+        <div id="login" class="col s12">
+          <form class="col s12" action="main.html">
+            <div class="form-container col s12">
+              <h3 lang="en" class="black-text center">Hello</h3>
+              <h3 lang="de" class="black-text center">Hallo</h3>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="email" type="email" class="validate">
+                  <label for="email">Email</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="password" type="password" class="validate">
+                  <label for="password"><div lang="en">Password</div><div lang="de">Passwort</div></label>
+                </div>
+              </div>
+              <br>
+              <center>
+                <button lang="en" class="btn waves-effect waves-light orange" type="submit" name="action">Connect</button><button lang="de" class="btn waves-effect waves-light orange" type="submit" name="action">Verbinden</button>
+                <br>
+                <a href="" style="font-size:13px;" lang="en">Forgotten password?</a><a href="" style="font-size:13px;" lang="de">Passwort vergessen?</a>
+                <br>
+              </center>
+            </div>
+          </form>
+        </div>
+        <div id="register" class="col s12">
+          <form class="col s12" action="creation.html">
+            <div class="form-container col s12">
+              <a class="tooltipped right" data-html="true" data-tooltip="For the full experience <br> all information is needed."><i class="material-icons grey-text">info_outline</i></a>
+              <h3 lang="en" class="form-text center">Welcome</h3>
+              <h3 lang="de" class="form-text center">Willkommen</h3>
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="last_name" type="text" class="validate">
+                  <label for="last_name"><div lang="en">First Name</div><div lang="de">Vorname</div></label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="last_name" type="text" class="validate">
+                  <label for="last_name"><div lang="en">Last Name</div><div lang="de">Nachname</div></label>
+                </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="email" type="email" class="validate">
+                  <label for="email">Email</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="password" type="password" class="validate">
+                  <label for="password"><div lang="en">Password</div><div lang="de">Password</div></label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="password-confirm" type="password" class="validate">
+                  <label for="password-confirm"><div lang="en">Password confirmation</div><div lang="de">Passwort bestätigen</div></label>
+                </div>
+              </div>
+              <center>
+                <button lang="en" class="btn waves-effect waves-light orange" type="submit" name="action">Register</button><button lang="de" class="btn waves-effect waves-light orange" type="submit" name="action">Registrieren</button>
+                <a class="tooltipped right" data-html="true" data-position="top" data-tooltip="After clicking the button <br> a family-group will get <br> created which is used <br>by every family-member."><i class="material-icons grey-text">help_outline</i></a>
 
-      <div id="login" class="col s12">
-        <form class="col s12">
-          <div class="form-container col s12">
-            <h3 lang="en" class="black-text center">Hello</h3><h3 lang="de" class="black-text center">Hallo</h3>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
-              </div>
+              </center>
             </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
-                <label for="password"><div lang="en">Password</div><div lang="de">Passwort</div></label>
-              </div>
-            </div>
-            <br>
-            <center>
-              <button lang="en" class="btn waves-effect waves-light orange" type="submit" name="action" href="creation.html">Connect</button><button lang="de" class="btn waves-effect waves-light orange" type="submit" name="action" href="creation.html">Verbinden</button>
-              <br>
-              <a href="" style="font-size:13px;" lang="en">Forgotten password?</a><a href="" style="font-size:13px;" lang="de">Passwort vergessen?</a>
-              <br>
-            </center>
-          </div>
-        </form>
-      </div>
-      <div id="register" class="col s12">
-        <form class="col s12">
-          <div class="form-container col s12">
-            <h3 lang="en" class="form-text center">Welcome</h3><h3 lang="de" class="form-text center">Willkommen</h3>
-            <div class="row">
-              <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name"><div lang="en">First Name</div><div lang="de">Vorname</div></label> <!--<i class="material-icons orange-text">info_outline</i>-->
-              </div>
-              <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name"><div lang="en">Last Name</div><div lang="de">Nachname</div></label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
-                <label for="password"><div lang="en">Password</div><div lang="de">Password</div></label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="password-confirm" type="password" class="validate">
-                <label for="password-confirm"><div lang="en">Password confirmation</div><div lang="de">Passwort bestätigen</div></label>
-              </div>
-            </div>
-            <center>
-              <button lang="en" class="btn waves-effect waves-light orange" type="submit" name="action" href="creation.html">Register</button><button lang="de" class="btn waves-effect waves-light orange" type="submit" name="action" href="creation.html">Registrieren</button>
-              <br>
-              <a class="center black-text" style="font-size:13px;" lang="en">Free</a>
-              <a class="center black-text" style="font-size:13px;" lang="de">Gratis</a>
-            </center>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
- <!-- Modal Structure -->
- <div class="row">
- <div id="historyModal" class="modal modal-fixed-footer col s12">
-   <div class="modal-content">
-     <h4>Update-Log</h4>
-     <p lang="en">
-        10.04.2018 - Adding this little update-log<br>
-        01.04.2018 - Frontpage-design completed.<br>
-        30.03.2018 - Linking sub-pages.<br>
-        20.03.2018 - Adding the login/register form.<br>
-        10.03.2018 - Developing supplementary pages.<br>
-        01.03.2018 - Start of translation (dual language).<br>
-        20.02.2018 - Design improved.<br>
-        10.01.2018 - Basic website frontpage written.<br>
-        22.12.2017 - Start of implementation work.<br>
-        20.11.2017 - Collection design ideas.<br>
-        05.11.2017 - Finished the planning-document.<br>
-        28.09.2017 - Defining and planning the idea.<br>
-        26.09.2017 - First Brainstorming<br>
+  <div class="row marginDiv">
+    <div id="historyModal" class="modal modal-fixed-footer col s12">
+      <div class="modal-content">
+        <h4>Update-Log</h4>
+        <p lang="en">
+          10.04.2018 - Adding this little update-log<br>
+          01.04.2018 - Frontpage-design completed.<br>
+          30.03.2018 - Linking sub-pages.<br>
+          20.03.2018 - Adding the login/register form.<br>
+          10.03.2018 - Developing supplementary pages.<br>
+          01.03.2018 - Start of translation (dual language).<br>
+          20.02.2018 - Design improved.<br>
+          10.01.2018 - Basic website frontpage written.<br>
+          22.12.2017 - Start of implementation work.<br>
+          20.11.2017 - Collection design ideas.<br>
+          05.11.2017 - Finished the planning-document.<br>
+          28.09.2017 - Defining and planning the idea.<br>
+          26.09.2017 - First Brainstorming<br>
 
-      </p>
-      <p lang="de">
-         10.04.2018 - Diesen kleinen Update-log hinzugefügt.<br>
-         01.04.2018 - Frontpage-design fertiggestellt.<br>
-         30.03.2018 - Unter-Websiten verbunden.<br>
-         20.03.2018 - Login/Registrier - Menu hinzugefügt<br>
-         10.03.2018 - Unter-Websiten programmieren<br>
-         01.03.2018 - Begin der Übersetzungsarbeit<br>
-         20.02.2018 - Design verbessert<br>
-         10.01.2018 - Grundsätzliche Frontpage fertig<br>
-         22.12.2017 - Beginn der Programmier-Arbeit<br>
-         20.11.2017 - Design-Ideen gesammelt<br>
-         05.11.2017 - Planungsdokument fertiggestellt<br>
-         28.09.2017 - Idee planen und definieren.<br>
-         26.09.2017 - Erstes Brainstormen<br>
+        </p>
+        <p lang="de">
+          10.04.2018 - Diesen kleinen Update-log hinzugefügt.<br>
+          01.04.2018 - Frontpage-design fertiggestellt.<br>
+          30.03.2018 - Unter-Websiten verbunden.<br>
+          20.03.2018 - Login/Registrier - Menu hinzugefügt<br>
+          10.03.2018 - Unter-Websiten programmieren<br>
+          01.03.2018 - Begin der Übersetzungsarbeit<br>
+          20.02.2018 - Design verbessert<br>
+          10.01.2018 - Grundsätzliche Frontpage fertig<br>
+          22.12.2017 - Beginn der Programmier-Arbeit<br>
+          20.11.2017 - Design-Ideen gesammelt<br>
+          05.11.2017 - Planungsdokument fertiggestellt<br>
+          28.09.2017 - Idee planen und definieren.<br>
+          26.09.2017 - Erstes Brainstormen<br>
 
-       </p>
+        </p>
 
-   </div>
-   <div class="modal-footer">
-     <a class="modal-action modal-close waves-effect waves-light btn-flat ">Close</a>
-   </div>
- </div>
-
+      </div>
+      <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-light btn-flat">Close</a>
+      </div>
+    </div>
+  </div>
 
 
 
