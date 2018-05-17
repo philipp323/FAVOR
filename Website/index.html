@@ -364,14 +364,14 @@
               <h3 lang="de" class="black-text center">Hallo</h3>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="email" type="email" class="validate">
-                  <label for="email">Email</label>
+                  <input id="emailLogin" type="email" class="validate" required="required">
+                  <label for="emailLogin">Email</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="password" type="password" class="validate">
-                  <label for="password"><div lang="en">Password</div><div lang="de">Passwort</div></label>
+                  <input id="passwordLogin" type="password" class="validate" required="required">
+                  <label for="passwordLogin"><div lang="en">Password</div><div lang="de">Passwort</div></label>
                 </div>
               </div>
               <br>
@@ -392,16 +392,16 @@
               <h3 lang="de" class="form-text center">Willkommen</h3>
               <div class="row">
                 <div class="input-field col s6">
-                  <input id="last_name" type="text" class="validate">
-                  <label for="last_name"><div lang="en">First Name</div><div lang="de">Vorname</div></label>
+                  <input id="first_name" type="text" class="validate" required="required">
+                  <label for="first_name"><div lang="en">First Name</div><div lang="de">Vorname</div></label>
                 </div>
                 <div class="input-field col s6">
-                  <input id="last_name" type="text" class="validate">
+                  <input id="last_name" type="text" class="validate" required="required">
                   <label for="last_name"><div lang="en">Last Name</div><div lang="de">Nachname</div></label>
                 </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="email" type="email" class="validate">
+                  <input id="email" type="email" class="validate" required="required">
                   <label for="email">Email</label>
                 </div>
               </div>
@@ -413,8 +413,8 @@
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="password-confirm" type="password" class="validate">
-                  <label for="password-confirm"><div lang="en">Password confirmation</div><div lang="de">Passwort bestätigen</div></label>
+                  <input id="passwordConfirm" type="password">
+                  <label id="lblPasswordConfirm" for="passwordConfirm" data-error="Password not match" data-success="Password Match"><div lang="en">Password confirmation</div><div lang="de">Passwort bestätigen</div></label>
                 </div>
               </div>
               <center>
@@ -434,6 +434,7 @@
       <div class="modal-content">
         <h4>Update-Log</h4>
         <p lang="en">
+          08.05.2018 - Started to develop creation menu<br>
           26.04.2018 - Translated "About"<br>
           19.04.2018 - "About" - page improved<br>
           10.04.2018 - Adding this little update-log<br>
@@ -452,6 +453,7 @@
 
         </p>
         <p lang="de">
+          08.05.2018 - Begonnen Erstellungsmenü zu erstellen<br>
           26.04.2018 - "Über uns" übersetzt.<br>
           19.04.2018 - "Über uns" Seite verbessert.<br>
           10.04.2018 - Diesen kleinen Update-log hinzugefügt.<br>
