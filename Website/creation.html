@@ -15,5 +15,55 @@
 </head>
 
 <body>
+  <div class="row">
+    <div class="col s12 m8 l6 offset-l3 offset-m2">
+      <div class="card white darken-1">
+        <div class="card-content">
+          <span class="card-title black-text">Add family members</span>
+          <br>
+            <form class="" action="main.html">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="first_name" type="text" class="validate" required="required">
+                  <label for="first_name"><div lang="en">First Name</div></label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="last_name" type="text" class="validate" required="required">
+                  <label for="last_name"><div lang="en">Last Name</div></label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="birthdate" type="date" class="datepicker">
+                  <label for="birthdate" class="">Birthdate</label>
+                </div>
+                <div class="input-field col s6">
+                 <select id="gender">
+                   <option value="" disabled selected>Gender</option>
+                   <option value="1">Female</option>
+                   <option value="2">Male</option>
+                   <option value="3">Other</option>
+                 </select>
+               </div>
+               <div class="input-field col s6">
+                <select id="role">
+                  <option value="" disabled selected>Role</option>
+                  <option value="1">Parent</option>
+                  <option value="2">Children</option>
+                </select>
+              </div>
+              </div>
+              <div class="divider"></div>
+              <br>
+              <button lang="en" class="btn waves-effect waves-light orange hide-on-small-only" type="submit">Next one<i class="material-icons right">add_circle</i></button>
+              <button lang="en" class="btn waves-effect waves-light orange right hide-on-small-only" type="submit" name="action">Let's go<i class="material-icons right">flag</i></button>
+              <button lang="en" class="btn waves-effect waves-light orange hide-on-med-and-up tooltipped" type="submit" data-tooltip="Next one"><i class="material-icons">add_circle</i></button>
+              <button lang="en" class="btn waves-effect waves-light orange hide-on-med-and-up tooltipped right" type="submit" data-tooltip="Let's go"><i class="material-icons">flag</i></button>
+          </form>
+        </div>
+    </div>
+  </div>
+</div>
 
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="materialize.min.js"></script>
 </body>
