@@ -1,0 +1,45 @@
+{
+  "family": [
+    {
+      "familyname": "Auinger",
+      "email": "philipp-auinger@gmx.at",
+      "password": "supersecretpassword",
+      "id": 0
+    },
+    {
+      "familyname": "Anteinsteiner",
+      "email": "thomas.antensteiner@gmail.com",
+      "password": "thisismypassword",
+      "id": 1
+    }
+  ],
+  "member": [
+    {
+      "famid": 0,
+      "firstname": "David",
+      "lastname": "Auinger",
+      "birthdate": "17.05.1997",
+      "gender": "Male",
+      "Role": "Child",
+      "id": 0
+    },
+    {
+      "famid": 0,
+      "firstname": "Christine",
+      "lastname": "Auinger",
+      "birthdate": "03.05.1972",
+      "gender": "Female",
+      "Role": "Parent",
+      "id": 1
+    },
+    {
+      "famid": 1,
+      "firstname": "Thomas",
+      "lastname": "Antensteiner",
+      "birthdate": "11.07.2001",
+      "gender": "Male",
+      "Role": "Child",
+      "id": 2
+    }
+  ]
+}
