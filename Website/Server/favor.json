@@ -11,6 +11,12 @@
       "email": "thomas.antensteiner@gmail.com",
       "password": "thisismypassword",
       "id": 1
+    },
+    {
+      "familyname": "Mustermann",
+      "email": "mustermann@gmail.com",
+      "password": "oppassword",
+      "id": 2
     }
   ],
   "member": [
