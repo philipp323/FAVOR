@@ -1,21 +1,37 @@
-function register() {
-  var url = "http://localhost:3000/family";
-  var data = {};
-  data.familyname = "Test";
-  data.email = "test@gmail.com";
-  data.password = "123456";
+window.addEventListener("load", function () {
+    var params;
 
-  var json = JSON.stringify(data);
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      params = {
+            familyname: document.querySelector('#family_name').value,
+            email: document.querySelector('#email').value,
+            password: document.querySelector('#password').value
+      }
 
+      console.log(params);
 
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", url, true);
-  xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-  xhr.onload = function() {
-    var users = JSON.parse(xhr.responseText);
-    if (xhr.readyState == 4 && xhr.status == "201") {
+      register();
+  });
 
-    }
+  function register() {
+
+        var url = "http://localhost:3000/family";
+        var request = new XMLHttpRequest();
+
+        request.addEventListener("load", function(event) {
+          //window.location.href = "creation.html";
+        });
+
+        request.addEventListener("error", function(event) {
+          alert('Oops! Something went wrong.');
+        });
+
+        request.open("POST", url);
+        request.setRequestHeader('Content-type', 'application/json');
+
+        console.log(JSON.stringify(params));
+        request.send(JSON.stringify(params));
+
   }
-  xhr.send(json);
-}
+});
