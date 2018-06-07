@@ -384,8 +384,8 @@
             </div>
           </form>
         </div>
-        <div id="register" class="col s12">
-          <form class="col s12" action="creation.html">
+        <div class="col s12">
+          <form class="col s12" id="register" name="registerForm">
             <div class="form-container col s12">
               <a class="tooltipped right" data-html="true" data-tooltip="For the full experience <br> all information is needed."><i class="material-icons grey-text">info_outline</i></a>
               <h3 lang="en" class="form-text center">Welcome</h3>
@@ -414,7 +414,7 @@
                 </div>
               </div>
               <center>
-                <button lang="en" class="btn waves-effect waves-light orange" type="submit" name="action" onclick="register()">Register</button><button lang="de" class="btn waves-effect waves-light orange" type="submit" name="action" onclick="register()">Registrieren</button>
+                <button lang="en" class="btn waves-effect waves-light orange" type="submit" onsubmit="register();">Register</button><button lang="de" class="btn waves-effect waves-light orange" type="submit" name="action" onsubmit="register();">Registrieren</button>
                 <a class="tooltipped right" data-html="true" data-position="top" data-tooltip="After clicking the button <br> a family-group will get <br> created which is used <br>by ALL family-members."><i class="material-icons grey-text">help_outline</i></a>
 
               </center>
