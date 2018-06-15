@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="app.css">
-    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>FAVOR</title>
+  <title>FAVOR</title>
 
-  </head>
+</head>
 
 <body>
   <div class="navbar-fixed">
-    <nav class="transparent" role="navigation">
+    <nav class="white" role="navigation">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo center hide-on-med-and-down"><b>Family Default</b></a>
+        <a href="#" class="brand-logo center hide-on-med-and-down orange-text"><b>Family Default</b></a>
         <a href="#" data-activates="mobile" class="button-collapse"><i class="large material-icons">menu</i></a>
 
         <!--Left alligned objects-->
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <ul class="left hide-on-med-and-down">
           <li>
             <a style="height:65px" href="#" class="image waves-effect">
               <img src="img/user_business_male.png" style="margin-top:1px" width=60 height=60>
@@ -47,29 +47,141 @@
           </li>
         </ul>
 
-        
+
 
         <!--Right alligned objects-->
-        <ul id="nav-mobile" class="right">
+        <ul class="right" style="height:65px">
           <li>
-            <a href="#" style="height:65px; font-size:20px" class="tooltipped transparent waves-effect" data-delay="50"
-             data-tooltip="Your currency">100<i class="large material-icons right">attach_money</i></a>
+            <a href="#" style="height:65px; font-size:20px" class="transparent waves-effect orange-text">100<i class="large material-icons right">attach_money</i></a>
           </li>
           <li>
-            <a class="btn-floating btn-large waves-effect modal-trigger tooltipped" data-position="bottom"
-             data-delay="50" data-tooltip="Click to create a task" href="#modal1"><i class="large material-icons orange">add</i></a>
+            <a href="#" class="btn-floating btn-large dropdown-button waves-effect" data-activates="dropdownSettings">
+              <i class="large material-icons orange">build</i></a>
           </li>
           <li>
-            <a href="#" class="btn-floating btn-large dropdown-button waves-effect tooltipped"
-             data-activates='dropdownSettings' data-position="bottom" data-delay="50" data-tooltip="Settings"><i class="large material-icons orange">build</i></a>
-          </li>
-          <li>
-            <a href="index.html" class="btn-floating btn-large waves-effect tooltipped" data-position="bottom"
-             data-delay="50" data-tooltip="Logout"><i class="large material-icons orange">power_settings_new</i></a>
+            <a href="index.html" class="btn-floating btn-large waves-effect"><i class="large material-icons orange">power_settings_new</i></a>
           </li>
         </ul>
       </div>
     </nav>
+  </div>
+
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large waves-effect waves-light orange">
+    <i class="large material-icons">add</i>
+  </a>
+    <ul>
+      <li><a class="btn-floating yellow darken-2 modal-trigger tooltipped" data-position="left" data-delay="50" data-tooltip="Wish"
+        href="#wishModal" onClick="activateYellowMenu();"><i class="material-icons">playlist_add</i></a></li>
+      <li><a class="btn-floating green modal-trigger tooltipped" data-position="left" data-delay="50" data-tooltip="Reward"
+        href="#rewardModal" onClick="activateGreenMenu();"><i class="material-icons">cake</i></a></li>
+      <li><a class="btn-floating blue modal-trigger tooltipped" data-position="left" data-delay="50" data-tooltip="Task"
+        href="#taskModal" onClick="activateBlueMenu();"><i class="material-icons">edit</i></a></li>
+    </ul>
+  </div>
+
+  <div class="row no-padding-bottom orange marginDiv">
+    <div id="taskModal" class="modal modalCentered col s12 m8 l6 offset-l3 offset-m2 no-padding">
+      <div class="modal-content">
+          <form class="col s12">
+            <div class="form-container col s12">
+              <h3 lang="en" class="black-text center">Create a Task</h3>
+              <div class="row">
+                <div class="input-field col s12 l6">
+                  <i class="material-icons prefix">title</i>
+                  <input id="taskTitle" type="text" class="" required="required">
+                  <label for="taskTitle"><div lang="en">Title</div></label>
+                </div>
+                <div class="input-field col s6 l3">
+                  <i class="material-icons prefix">access_alarm</i>
+                  <input id="duedate" type="date" class="datepicker" required="required">
+                  <label for="duedate" class="">Due date</label>
+                </div>
+                <div class="input-field col s6 l3">
+                  <input id="duetime" type="text" class="timepicker" required="required">
+                  <label for="duetime" class="">Time</label>
+                </div>
+
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">notes</i>
+                  <textarea id="description" class="materialize-textarea"></textarea>
+                  <label for="description">Description</label>
+                  </div>
+                </div>
+                <button lang="en" class="btn waves-effect waves-light blue hide-on-small-only" type="submit">Cancel<i class="material-icons right">clear</i></button>
+                <button lang="en" class="btn waves-effect waves-light blue right hide-on-small-only" type="submit">Submit<i class="material-icons right">done</i></button>
+                <button lang="en" class="btn waves-effect waves-light blue hide-on-med-and-up tooltipped" type="submit" data-tooltip="Cancel" data-delay="50"><i class="material-icons">clear</i></button>
+                <button lang="en" class="btn waves-effect waves-light blue hide-on-med-and-up tooltipped right" type="submit" data-tooltip="Submit" data-delay="50"><i class="material-icons">done</i></button>
+                <br>
+                <br>
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
+
+  <div class="row no-padding-bottom orange marginDiv">
+    <div id="rewardModal" class="modal modalCentered col s12 m8 l6 offset-l3 offset-m2 no-padding">
+      <div class="modal-content">
+          <form class="col s12">
+            <div class="form-container col s12">
+              <h3 lang="en" class="black-text center">Create a Reward</h3>
+              <div class="row">
+                <div class="input-field col s12 l6">
+                  <input id="taskTitle" type="text" class="" required="required">
+                  <label for="taskTitle"><div lang="en">Title</div></label>
+                </div>
+                <div class="input-field col s12 l6">
+                  <input id="duedate" type="date" class="datepicker">
+                  <label for="duedate" class="">Due date</label>
+                </div>
+              </div>
+                <div class="input-field col s12">
+                  <textarea id="description" class="materialize-textarea"></textarea>
+                  <label for="description">Description</label>
+                </div>
+                <button lang="en" class="btn waves-effect waves-light green hide-on-small-only" type="submit">Cancel<i class="material-icons right">clear</i></button>
+                <button lang="en" class="btn waves-effect waves-light green right hide-on-small-only" type="submit">Submit<i class="material-icons right">done</i></button>
+                <button lang="en" class="btn waves-effect waves-light green hide-on-med-and-up tooltipped" type="submit" data-tooltip="Cancel" data-delay="50"><i class="material-icons">clear</i></button>
+                <button lang="en" class="btn waves-effect waves-light green hide-on-med-and-up tooltipped right" type="submit" data-tooltip="Submit" data-delay="50"><i class="material-icons">done</i></button>
+                <br>
+                <br>
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
+
+  <div class="row no-padding-bottom orange marginDiv">
+    <div id="wishModal" class="modal modalCentered col s12 m8 l6 offset-l3 offset-m2 no-padding">
+      <div class="modal-content">
+          <form class="col s12">
+            <div class="form-container col s12">
+              <h3 lang="en" class="black-text center">Create a Wish</h3>
+              <div class="row">
+                <div class="input-field col s12 l6">
+                  <input id="taskTitle" type="text" class="" required="required">
+                  <label for="taskTitle"><div lang="en">Title</div></label>
+                </div>
+                <div class="input-field col s12 l6">
+                  <input id="duedate" type="date" class="datepicker">
+                  <label for="duedate" class="">Due date</label>
+                </div>
+              </div>
+                <div class="input-field col s12">
+                  <textarea id="description" class="materialize-textarea"></textarea>
+                  <label for="description">Description</label>
+                </div>
+                <button lang="en" class="btn waves-effect waves-light yellow darken-2 hide-on-small-only" type="submit">Cancel<i class="material-icons right">clear</i></button>
+                <button lang="en" class="btn waves-effect waves-light yellow darken-2 right hide-on-small-only" type="submit">Submit<i class="material-icons right">done</i></button>
+                <button lang="en" class="btn waves-effect waves-light yellow darken-2 hide-on-med-and-up tooltipped" type="submit" data-tooltip="Cancel" data-delay="50"><i class="material-icons">clear</i></button>
+                <button lang="en" class="btn waves-effect waves-light yellow darken-2 hide-on-med-and-up tooltipped right" type="submit" data-tooltip="Submit" data-delay="50"><i class="material-icons">done</i></button>
+                <br>
+                <br>
+            </div>
+          </form>
+        </div>
+    </div>
   </div>
 
   <ul id='dropdownSettings' class='dropdown-content' style="margin-top:65px">
@@ -82,16 +194,9 @@
     <li><a href="#!"><i class="material-icons">info</i>About</a></li>
   </ul>
 
-  <ul style="width:65px" class="nav-side fixed transparent">
-    <li>
-      <a style="width:65px; height:65px; margin-bottom:15px; margin-top:75px" href="mat.html"
-        class="btn-floating btn-large waves-effect transparent tooltipped" data-position="right" data-delay="50" data-tooltip="Task list">
-          <i class="large material-icons">assignment</i></a>
-      </a>
-    </li>
-  </ul>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="materialize.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
