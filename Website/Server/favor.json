@@ -17,6 +17,12 @@
       "email": "mustermann@gmail.com",
       "password": "oppassword",
       "id": 2
+    },
+    {
+      "familyname": "Tripic",
+      "email": "tripic.nenad@gmail.com",
+      "password": "coolespassword",
+      "id": 3
     }
   ],
   "member": [
