@@ -4194,26 +4194,6 @@ nav .input-field label.active i {
   }
 }
 
-.picker__close{
-   color: #ff9800 !important;
-}
-
-.picker__today {
-  color: #ff9800 !important;
-}
-
-.picker__day--today{
-  color: #ff9800 !important;
-}
-
-.picker__day--selected{
-  background-color: #ff9800 !important;
-}
-
-.picker__date-display, .picker__weekday-display{
-    background-color: #ff9800 !important;
-}
-
 @font-face {
   font-family: "Roboto";
   src: local(Roboto Thin), url("../fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("../fonts/roboto/Roboto-Thin.woff") format("woff");
