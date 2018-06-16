@@ -1,5 +1,3 @@
-# Welcome to the FAVOR-DEVELOPMENT-Repository!
+# v0.3 RELEASE INSTRUCTIONS
+21.06.2018 written by Philipp Auinger
 
-FAVOR, a special Family Organizer.
-
-Coding and Planing...
