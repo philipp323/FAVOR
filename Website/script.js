@@ -72,20 +72,51 @@ window.addEventListener("load", function () {
     request.open("POST", url);
     request.setRequestHeader('Content-type', 'application/json');
 
-    console.log(JSON.strin)
     request.send(JSON.stringify(params));
 
   }
 });
 
+defaultTags = [
+    {tag: 'Housework'},
+    {tag:'Homework'},
+];
+
+memberTags = [
+    {tag: 'Paul'},
+    {tag: 'Philipp'},
+    {tag: 'Susi'}
+];
+
   function activateBlueMenu(){
     document.body.style.setProperty('--main-color',"#2196F3");
+    document.body.style.setProperty('--time-color',"rgb(33, 150, 243, 0.25)");
+
+    //taskMenu tag init
+
+    $('#memberTag').material_chip({
+        data: memberTags
+    });
+
+    $('#topicTag').material_chip({
+        data: defaultTags
+	  });
+    
   }
 
   function activateYellowMenu(){
     document.body.style.setProperty('--main-color',"#fbc02d");
+    document.body.style.setProperty('--time-color',"rgb(251, 192, 45, 0.25)");
   }
 
   function activateGreenMenu(){
     document.body.style.setProperty('--main-color',"#4CAF50");
+    document.body.style.setProperty('--time-color',"rgb(76, 175, 80, 0.25)");
+  }
+
+  var forms = document.getElementsByTagName('form');
+  for (var i = forms.length; i--;)
+      forms[i].addEventListener('reset', handleFormReset.bind(), false);
+  function handleFormReset() {
+      Materialize.updateTextFields();
   }
