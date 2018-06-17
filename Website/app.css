@@ -28,6 +28,16 @@ body {
   background-color: var(--main-color) !important;
 }
 
+.picker__nav--prev:hover, .picker__nav--next:hover {
+  cursor: pointer;
+  color: #000000;
+  background: var(--time-color) !important;
+}
+
+.picker__clear:focus, .picker__today:focus, .picker_close:focus, .picker__close:focus{
+  background: var(--time-color) !important;
+}
+
 /* label focus color */
 
 .input-field input[type=text]:focus+label {
@@ -58,4 +68,41 @@ body {
 textarea:focus {
   border-bottom: 1px solid var(--main-color) !important;
   box-shadow: 0 1px 0 0 var(--main-color) !important;
+}
+
+/*time picker color*/
+
+.clockpicker-tick.active, .clockpicker-tick:hover {
+  background-color: var(--time-color) !important;
+}
+
+.clockpicker-canvas line {
+   stroke: var(--main-color) !important;
+ }
+
+.clockpicker-canvas-bearing {
+   fill: var(--main-color) !important;
+}
+
+.clockpicker-canvas-bg {
+   fill: var(--main-color) !important;
+ }
+
+
+ /*checkboxpicker color checked*/
+[type="checkbox"]:checked + label::before {
+   border-right: 2px solid var(--main-color) !important;
+   border-bottom: 2px solid var(--main-color) !important;
+}
+
+/*tag colors*/
+.chips.focus {
+  border-bottom: 1px solid var(--main-color) !important;
+  -webkit-box-shadow: 0 1px 0 0 var(--main-color) !important;
+  box-shadow: 0 1px 0 0 var(--main-color) !important;
+}
+
+.chips .chip.selected {
+  background-color: var(--main-color) !important;
+  color: #fff
 }
