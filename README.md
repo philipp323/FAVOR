@@ -1,13 +1,13 @@
 # v0.3 FAVOR RELEASE
 
 ## :clipboard: Table of Contents
-- [Introduction](#Introduction)
+- [Introduction](#arrow_forward-introduction)
 - [Quickstart](#-quickstart)
-- [Documentation](https://github.com/PhilippAuinger/FAVOR/edit/master/README.md#L41)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- Build with
-- [Links](#links)
+- [Documentation](#page_facing_up-documentation)
+- [Testing](#microscope-testing)
+- [Contributing](#chart_with_upwards_trend-contributing)
+- [Build with](#wrench-build-with)
+- [Links](#link-links)
 
 ## :arrow_forward: Introduction
 
