@@ -3,7 +3,7 @@
 ## :clipboard: Table of Contents
 - [Introduction](#Introduction)
 - [Quickstart](#-quickstart)
-- [Documentation](README.md#L41)
+- [Documentation](https://github.com/PhilippAuinger/FAVOR/edit/master/README.md#L41)
 - [Testing](#testing)
 - [Contributing](#contributing)
 - Build with
