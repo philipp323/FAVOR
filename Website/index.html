@@ -319,7 +319,7 @@
           <div class="col l3 s12">
             <h5 class="white-text">Links</h5>
             <ul>
-              <li><a lang="en" class="white-text" href="us.html"><b>About us</b></a> <a lang="de" class="white-text" href="us.html">Über uns</a></li>
+              <li><a lang="en" class="white-text" href="about.html"><b>About us</b></a> <a lang="de" class="white-text" href="about.html">Über uns</a></li>
               <li><a lang="en" class="white-text modal-trigger" href="#historyModal">Website-History</a> <a lang="de" class="white-text modal-trigger" href="#historyModal">Website-Geschichte</a></li>
               <li><a class="white-text disable" target="_blank" href="https://www.htl-leonding.at">HTL-Leonding</a></li>
               <!--<li><a lang="en" class="white-text" href="#!">Tutorial</a> <a lang="de" class="white-text" href="#!">Anleitung</a></li>-->
@@ -350,7 +350,7 @@
 
     <!--Login/Register-->
   <div class="row no-padding-bottom orange marginDiv">
-    <div id="modalLogin" class="modal modalLogin col l4 m6 s12 offset-l4 offset-m3 no-padding">
+    <div id="modalLogin" class="modal modalCentered col l4 m6 s12 offset-l4 offset-m3 no-padding">
       <ul class="tabs orange">
         <li class="tab col s6"><a class="white-text active" href="#login">login</a></li>
         <li class="tab col s6"><a class="white-text" href="#register">register</a></li>
@@ -358,20 +358,20 @@
       <div class="modal-content">
 
         <div id="login" class="col s12">
-          <form class="col s12" action="main.html">
+          <form class="col s12" action="app.html">
             <div class="form-container col s12">
               <h3 lang="en" class="black-text center">Hello</h3>
               <h3 lang="de" class="black-text center">Hallo</h3>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="email" type="email" class="validate">
-                  <label for="email">Email</label>
+                  <input id="emailLogin" type="email" class="validate" required="required">
+                  <label for="emailLogin">Email</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="password" type="password" class="validate">
-                  <label for="password"><div lang="en">Password</div><div lang="de">Passwort</div></label>
+                  <input id="passwordLogin" type="password" class="validate" required="required">
+                  <label for="passwordLogin"><div lang="en">Password</div><div lang="de">Passwort</div></label>
                 </div>
               </div>
               <br>
@@ -384,24 +384,20 @@
             </div>
           </form>
         </div>
-        <div id="register" class="col s12">
-          <form class="col s12" action="creation.html">
+        <div class="col s12">
+          <form class="col s12" id="register" name="registerForm">
             <div class="form-container col s12">
               <a class="tooltipped right" data-html="true" data-tooltip="For the full experience <br> all information is needed."><i class="material-icons grey-text">info_outline</i></a>
               <h3 lang="en" class="form-text center">Welcome</h3>
               <h3 lang="de" class="form-text center">Willkommen</h3>
               <div class="row">
-                <div class="input-field col s6">
-                  <input id="last_name" type="text" class="validate">
-                  <label for="last_name"><div lang="en">First Name</div><div lang="de">Vorname</div></label>
-                </div>
-                <div class="input-field col s6">
-                  <input id="last_name" type="text" class="validate">
-                  <label for="last_name"><div lang="en">Last Name</div><div lang="de">Nachname</div></label>
+                <div class="input-field col s12">
+                  <input id="family_name" type="text" class="validate" required="required">
+                  <label for="family_name"><div lang="en">Family Name</div><div lang="de">Familienname</div></label>
                 </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="email" type="email" class="validate">
+                  <input id="email" type="email" class="validate" required="required">
                   <label for="email">Email</label>
                 </div>
               </div>
@@ -413,12 +409,12 @@
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="password-confirm" type="password" class="validate">
-                  <label for="password-confirm"><div lang="en">Password confirmation</div><div lang="de">Passwort bestätigen</div></label>
+                  <input id="passwordConfirm" type="password">
+                  <label id="lblPasswordConfirm" for="passwordConfirm" data-error="Password not match" data-success="Password Match"><div lang="en">Password confirmation</div><div lang="de">Passwort bestätigen</div></label>
                 </div>
               </div>
               <center>
-                <button lang="en" class="btn waves-effect waves-light orange" type="submit" name="action">Register</button><button lang="de" class="btn waves-effect waves-light orange" type="submit" name="action">Registrieren</button>
+                <button lang="en" class="btn waves-effect waves-light orange" type="submit" onsubmit="register();">Register</button><button lang="de" class="btn waves-effect waves-light orange" type="submit" name="action" onsubmit="register();">Registrieren</button>
                 <a class="tooltipped right" data-html="true" data-position="top" data-tooltip="After clicking the button <br> a family-group will get <br> created which is used <br>by ALL family-members."><i class="material-icons grey-text">help_outline</i></a>
 
               </center>
@@ -434,6 +430,9 @@
       <div class="modal-content">
         <h4>Update-Log</h4>
         <p lang="en">
+          05.06.2018 - Ability to register given<br>
+          24.05.2018 - Creation fully designed<br>
+          08.05.2018 - Started to develop creation menu<br>
           26.04.2018 - Translated "About"<br>
           19.04.2018 - "About" - page improved<br>
           10.04.2018 - Adding this little update-log<br>
@@ -452,6 +451,9 @@
 
         </p>
         <p lang="de">
+          05.06.2018 - Registrierung möglich<br>
+          24.05.2018 - Erstellungsmenü fertig designed<br>
+          08.05.2018 - Begonnen Erstellungsmenü zu designen<br>
           26.04.2018 - "Über uns" übersetzt.<br>
           19.04.2018 - "Über uns" Seite verbessert.<br>
           10.04.2018 - Diesen kleinen Update-log hinzugefügt.<br>
@@ -481,6 +483,7 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="materialize.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>

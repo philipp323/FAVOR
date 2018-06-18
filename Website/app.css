@@ -1,0 +1,108 @@
+body {
+  background-color: #edebef;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffbc00' fill-opacity='0.69' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+/*CUSTOM COLORS for picker and fields (js function for setting the color)*/
+
+/* picker custom colors*/
+
+.picker__close {
+  color: var(--main-color) !important;
+}
+
+.picker__today {
+  color: var(--main-color) !important;
+}
+
+.picker__day--today {
+  color: var(--main-color) !important;
+}
+
+.picker__day--selected {
+  background-color: var(--main-color) !important;
+}
+
+.picker__date-display, .picker__weekday-display {
+  background-color: var(--main-color) !important;
+}
+
+.picker__nav--prev:hover, .picker__nav--next:hover {
+  cursor: pointer;
+  color: #000000;
+  background: var(--time-color) !important;
+}
+
+.picker__clear:focus, .picker__today:focus, .picker_close:focus, .picker__close:focus{
+  background: var(--time-color) !important;
+}
+
+/* label focus color */
+
+.input-field input[type=text]:focus+label {
+  color: var(--main-color) !important;
+}
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid var(--main-color) !important;
+  box-shadow: 0 1px 0 0 var(--main-color) !important;
+}
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+  color: var(--main-color) !important;
+}
+
+/* textarea focus and label name*/
+
+.input-field textarea:focus + label {
+  color: var(--main-color) !important;
+}
+
+/* textarea underline focus color*/
+
+textarea:focus {
+  border-bottom: 1px solid var(--main-color) !important;
+  box-shadow: 0 1px 0 0 var(--main-color) !important;
+}
+
+/*time picker color*/
+
+.clockpicker-tick.active, .clockpicker-tick:hover {
+  background-color: var(--time-color) !important;
+}
+
+.clockpicker-canvas line {
+   stroke: var(--main-color) !important;
+ }
+
+.clockpicker-canvas-bearing {
+   fill: var(--main-color) !important;
+}
+
+.clockpicker-canvas-bg {
+   fill: var(--main-color) !important;
+ }
+
+
+ /*checkboxpicker color checked*/
+[type="checkbox"]:checked + label::before {
+   border-right: 2px solid var(--main-color) !important;
+   border-bottom: 2px solid var(--main-color) !important;
+}
+
+/*tag colors*/
+.chips.focus {
+  border-bottom: 1px solid var(--main-color) !important;
+  -webkit-box-shadow: 0 1px 0 0 var(--main-color) !important;
+  box-shadow: 0 1px 0 0 var(--main-color) !important;
+}
+
+.chips .chip.selected {
+  background-color: var(--main-color) !important;
+  color: #fff
+}
