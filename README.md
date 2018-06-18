@@ -6,6 +6,7 @@
 - [Documentation](#page_facing_up-documentation)
 - [Site-List](#mag_right-site-list)
 - [Feature-List](#memo-feature-list)
+- [Change-Log](#floppy_disk-change-log)
 - [Testing](#microscope-testing)
 - [Contributing](#chart_with_upwards_trend-contributing)
 - [Build with](#wrench-build-with)
