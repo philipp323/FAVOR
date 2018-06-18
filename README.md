@@ -4,8 +4,8 @@
 - [Introduction](#arrow_forward-introduction)
 - [Quickstart](#rocket-quickstart)
 - [Documentation](#page_facing_up-documentation)
-- [Site-List](#)
-- [Feature-List](#)
+- [Site-List](#mag_right-site-list)
+- [Feature-List](#memo-feature-list)
 - [Testing](#microscope-testing)
 - [Contributing](#chart_with_upwards_trend-contributing)
 - [Build with](#wrench-build-with)
@@ -53,10 +53,20 @@ Project Documents:
   - [about.html](http://favortest.somee.com/about.html) (Page which shows us and our school)
   - creation.html (Page for the Family-Group-Creation-Process)
   - app.html (Page with Features and Functionalities, such as the Task-Create-Menu)
+  
+  We invested a lot of time in designing and styling, features will follow soon!
 
 ## :memo: Feature-List:
 
-
+- Register (Family-Group)
+  - Saves data to JSON-File
+- Family-Member-Creation
+  - Saves data to JSON-File
+  - Adds to a Family-Group
+- Task-Creation
+  - Saves data to JSON-File
+  - Adds to a Family-Group
+  
 
 ## :microscope: Testing:
 
