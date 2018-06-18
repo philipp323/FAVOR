@@ -4,6 +4,8 @@
 - [Introduction](#arrow_forward-introduction)
 - [Quickstart](#rocket-quickstart)
 - [Documentation](#page_facing_up-documentation)
+- [Site-List](#)
+- [Feature-List](#)
 - [Testing](#microscope-testing)
 - [Contributing](#chart_with_upwards_trend-contributing)
 - [Build with](#wrench-build-with)
@@ -35,12 +37,6 @@
   
 - Open "index.html" file
 
-#### List of all reachable HTML-Files
-  - index.html
-  - about.html
-  - creation.html
-  - app.html
-
 Just for design and animation reviewing, the website is already [reachable online.](http://favortest.somee.com/index.html)  
 :construction: Notice: No database connection given!
 
@@ -49,6 +45,18 @@ Just for design and animation reviewing, the website is already [reachable onlin
 Project Documents:
 - [System Specification](Documents/SystemSpecificationFavor.pdf)
 - [Project Proposal](Documents/ProjectProposalFavor.pdf)
+
+## :mag_right: Site-List:
+
+#### List of all reachable HTML-Files
+  - [index.html](http://favortest.somee.com/index.html) (Frontpage with Product Introduction)
+  - [about.html](http://favortest.somee.com/about.html) (Page which shows us and our school)
+  - creation.html (Page for the Family-Group-Creation-Process)
+  - app.html (Page with Features and Functionalities, such as the Task-Create-Menu)
+
+## :memo: Feature-List:
+
+
 
 ## :microscope: Testing:
 
