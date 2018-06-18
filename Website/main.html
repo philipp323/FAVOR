@@ -9,12 +9,17 @@
   <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <title>FAVOR</title>
-
+  <script>
+  $(document).ready(function(){
+  $("#send_btn").click(function(){
+      $("#place_holder").append("");
+  });
+});
+  </script>
 </head>
-
-<body>
+<body id="body">
   <div class="navbar-fixed">
     <nav style="height:65px" class="transparent">
       <div class="nav-wrapper">
@@ -75,8 +80,8 @@
             <div class="col s12 center text-accent-1"><h4>Create Task</h4><div class="divider"></div></div>
             <div class="input-field col s12">
               <i class="material-icons prefix">assignment</i>
-              <input id="icon_prefix" type="text" class="validate">
-              <label for="icon_prefix">Task name</label>
+              <input id="task_name" type="text" class="validate">
+              <label for="task_name">Task name</label>
             </div>
             <i class="material-icons left">alarm</i>
               <div class="datepicker col s6">
@@ -85,15 +90,15 @@
               </div>
             <div class="input-field col s12">
               <i class="material-icons prefix">mode_edit</i>
-              <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-              <label for="icon_prefix2">Description</label>
+              <textarea id="task_desc" class="materialize-textarea"></textarea>
+              <label for="task_desc">Description</label>
             </div>
           </div>
         </form>
       </div>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="btn modal-action <modal-close></modal-close> waves-effect waves-green red darken-2 right">
+      <a href="#!"id="send_btn" class="btn modal-action <modal-close></modal-close> waves-effect waves-green red darken-2 right">
         Submit<i class="material-icons right">send</i></a>
       <a href="#!" class="btn modal-action modal-close waves-effect waves-green red lighten-1 left">
         Cancel<i class="material-icons left">cancel</i></a>
@@ -117,7 +122,9 @@
                 <i class="large material-icons">assignment</i></a>
           </a>
         </li>
-      <!--  <li>
+
+
+       <li>
           <a style="width:65px; height:65px; margin-bottom:15px" href="reward.html"
           class="btn-floating btn-large waves-effect transparent tooltipped" data-position="right" data-delay="50" data-tooltip="Rewards">
                 <i class="large material-icons">shopping_cart</i></a>
@@ -130,75 +137,9 @@
           </a>
         </li>
       </ul>
--->
-
-<!--  <ul class="collapsible popout" style="margin-left:90px; margin-right:15px;" data-collapsible="accordion">
-    <li>
-      <div class="collapsible-header"><i class="material-icons">done</i>Tidy up room</div>
-      <div class="collapsible-body">
-        <div class="divider"></div>
-        <div class="section">
-          <h5>Description</h5>
-          <p>Tidy up our room a little bit, use the vacuum cleaner and sort your toys into the big box!</p>
-        </div>
-        <div class="divider"></div>
-        <div class="section">
-          <h5>Date</h5>
-          <p>DUE: 09/02/2018</p>
-        </div>
-        <div class="divider"></div>
-        <div class="section">
-          <h5>More Information</h5>
-          <p>........</p>
-        </div>
-        <div class="divider"></div>
-        <div style="height:50px"class="section">
-          <a class="left btn-floating btn-large waves-effect green tooltipped" data-position="bottom" data-delay="50"
-           data-tooltip="Accept"><i class="large material-icons">done</i></a>
-          <a class="right btn-floating btn-large waves-effect red tooltipped" data-position="bottom" data-delay="50"
-           data-tooltip="Decline"><i class="large material-icons">clear</i></a>
-        </div>
-    </li>
-
+      <div id="place_holder">
 
       </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">error_outline</i>Wash car</div>
-      <div class="collapsible-body">
-        <ul>
-          <li>
-
-          </li>
-          <li>
-            <a class="left btn-floating btn-large waves-effect green tooltipped" data-position="bottom" data-delay="50"
-             data-tooltip="Accept"><i class="large material-icons">done</i></a>
-            <a class="right btn-floating btn-large waves-effect red tooltipped" data-position="bottom" data-delay="50"
-             data-tooltip="Decline"><i class="large material-icons">clear</i></a>
-          </li>
-        </ul>
-        <div style="height:25px"></div>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">clear</i>Study for math</div>
-      <div class="collapsible-body">
-        <ul>
-          <li>
-
-          </li>
-          <li>
-            <a class="left btn-floating btn-large waves-effect green tooltipped" data-position="bottom" data-delay="50"
-             data-tooltip="Accept"><i class="large material-icons">done</i></a>
-            <a class="right btn-floating btn-large waves-effect red tooltipped" data-position="bottom" data-delay="50"
-             data-tooltip="Decline"><i class="large material-icons">clear</i></a>
-          </li>
-        </ul>
-        <div style="height:25px"></div>
-      </div>
-    </li>
-  </ul>
--->
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="materialize.min.js"></script>
