@@ -73,7 +73,7 @@ Project Documents:
 Reachable in the [Footer of our Website](http://favortest.somee.com/#footer) -> "Website-History"
 
 ## :microscope: Testing:
-
+Browser: FireFox Quantum 60.0.2
 
 
 ## :chart_with_upwards_trend: Contributing:
