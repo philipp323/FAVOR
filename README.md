@@ -20,7 +20,7 @@
 
 - Clone v0.3 of FAVOR
   ```
-  $ git clone https://github.com/PhilippAuinger/FAVOR.git
+  $ git clone https://github.com/philipp323/FAVOR.git
   $ git checkout tags/v0.3
   ```
   
