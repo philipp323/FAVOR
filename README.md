@@ -6,6 +6,7 @@
 - [Documentation](#page_facing_up-documentation)
 - [Site-List](#mag_right-site-list)
 - [Feature-List](#memo-feature-list)
+- [Change-Log](#floppy_disk-change-log)
 - [Testing](#microscope-testing)
 - [Contributing](#chart_with_upwards_trend-contributing)
 - [Build with](#wrench-build-with)
@@ -66,10 +67,13 @@ Project Documents:
 - Task-Creation
   - Saves data to JSON-File
   - Adds to a Family-Group
-  
+
+## :floppy_disk: Change-Log:
+
+Reachable in the [Footer of our Website](http://favortest.somee.com/#footer) -> "Website-History"
 
 ## :microscope: Testing:
-
+Browser: FireFox Quantum 60.0.2
 
 
 ## :chart_with_upwards_trend: Contributing:
