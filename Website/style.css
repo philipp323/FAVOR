@@ -2376,7 +2376,7 @@ a {
   box-shadow: none !important
 }
 
-.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .sidenav {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
 }
@@ -3129,7 +3129,7 @@ nav ul a span.badge {
   margin-left: auto
 }
 
-.side-nav span.badge {
+.sidenav span.badge {
   margin-top: calc(24px - 11px)
 }
 
@@ -5485,17 +5485,49 @@ button.btn-floating {
   padding: 2rem
 }
 
-.side-nav .collapsible, .side-nav.fixed .collapsible {
+@media only screen and (min-width: 993px) {
+  nav a.sidenav-trigger {
+    display: none;
+  }
+}
+
+nav .sidenav-trigger {
+  float: left;
+  position: relative;
+  z-index: 1;
+  height: 56px;
+  margin: 0 18px;
+}
+
+nav .sidenav-trigger i {
+  height: 56px;
+  line-height: 56px;
+}
+
+@media only screen and (min-width: 601px) {
+  nav.nav-extended .nav-wrapper {
+    min-height: 64px;
+  }
+  nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+    height: 64px;
+    line-height: 64px;
+  }
+  .navbar-fixed {
+    height: 64px;
+  }
+}
+
+.sidenav .collapsible, .sidenav.fixed .collapsible {
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none
 }
 
-.side-nav .collapsible li, .side-nav.fixed .collapsible li {
+.sidenav .collapsible li, .sidenav.fixed .collapsible li {
   padding: 0
 }
 
-.side-nav .collapsible-header, .side-nav.fixed .collapsible-header {
+.sidenav .collapsible-header, .sidenav.fixed .collapsible-header {
   background-color: transparent;
   border: none;
   line-height: inherit;
@@ -5503,20 +5535,20 @@ button.btn-floating {
   padding: 0 16px
 }
 
-.side-nav .collapsible-header:hover, .side-nav.fixed .collapsible-header:hover {
+.sidenav .collapsible-header:hover, .sidenav.fixed .collapsible-header:hover {
   background-color: rgba(0, 0, 0, 0.05)
 }
 
-.side-nav .collapsible-header i, .side-nav.fixed .collapsible-header i {
+.sidenav .collapsible-header i, .sidenav.fixed .collapsible-header i {
   line-height: inherit
 }
 
-.side-nav .collapsible-body, .side-nav.fixed .collapsible-body {
+.sidenav .collapsible-body, .sidenav.fixed .collapsible-body {
   border: 0;
   background-color: #fff
 }
 
-.side-nav .collapsible-body li a, .side-nav.fixed .collapsible-body li a {
+.sidenav .collapsible-body li a, .sidenav.fixed .collapsible-body li a {
   padding: 0 23.5px 0 31px
 }
 
@@ -6740,19 +6772,31 @@ input[type=range]:focus::-ms-fill-upper {
   border-left: 2px solid #ee6e73
 }
 
-.nav-side {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  position: fixed;
-  background-color: #fff;
-  width: 64px;
-  z-index: 20; }
 
-.nav-side:hover {
-  z-index: 81; }
+  .sidenav {
+    position: fixed;
+    width: 300px;
+    left: 0;
+    top: 0;
+    margin: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    height: 100%;
+    height: calc(100% + 60px);
+    height: -moz-calc(100%);
+    padding-bottom: 60px;
+    background-color: #fff;
+    z-index: 999;
+    overflow-y: auto;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: translateX(-105%);
+            transform: translateX(-105%);
+  }
 
-.side-nav.right-aligned {
+
+.sidenav.right-aligned {
   right: 0;
   -webkit-transform: translateX(105%);
   transform: translateX(105%);
@@ -6761,20 +6805,20 @@ input[type=range]:focus::-ms-fill-upper {
   transform: translateX(100%)
 }
 
-.side-nav .collapsible {
-  margin: 0
+.sidenav .collapsible {
+  margin: 0;
 }
 
-.side-nav li {
+.sidenav li {
   float: none;
   line-height: 48px
 }
 
-.side-nav li.active {
+.sidenav li.active {
   background-color: rgba(0, 0, 0, 0.05)
 }
 
-.side-nav li>a {
+.sidenav li>a {
   color: rgba(0, 0, 0, 0.87);
   display: block;
   font-size: 14px;
@@ -6784,31 +6828,31 @@ input[type=range]:focus::-ms-fill-upper {
   padding: 0 32px
 }
 
-.side-nav li>a:hover {
+.sidenav li>a:hover {
   background-color: rgba(0, 0, 0, 0.05)
 }
 
-.side-nav li>a.btn, .side-nav li>a.btn-large, .side-nav li>a.btn-large, .side-nav li>a.btn-flat, .side-nav li>a.btn-floating {
+.sidenav li>a.btn, .sidenav li>a.btn-large, .sidenav li>a.btn-large, .sidenav li>a.btn-flat, .sidenav li>a.btn-floating {
   margin: 0px
 }
 
-.side-nav li>a.btn, .side-nav li>a.btn-large, .side-nav li>a.btn-large, .side-nav li>a.btn-floating {
+.sidenav li>a.btn, .sidenav li>a.btn-large, .sidenav li>a.btn-large, .sidenav li>a.btn-floating {
   color: #fff
 }
 
-.side-nav li>a.btn-flat {
+.sidenav li>a.btn-flat {
   color: #343434
 }
 
-.side-nav li>a.btn:hover, .side-nav li>a.btn-large:hover, .side-nav li>a.btn-large:hover {
+.sidenav li>a.btn:hover, .sidenav li>a.btn-large:hover, .sidenav li>a.btn-large:hover {
   background-color: #2bbbad
 }
 
-.side-nav li>a.btn-floating:hover {
+.sidenav li>a.btn-floating:hover {
   background-color: #26a69a
 }
 
-.side-nav li>a>i, .side-nav li>a>[class^="mdi-"], .side-nav li>a li>a>[class*="mdi-"], .side-nav li>a>i.material-icons {
+.sidenav li>a>i, .sidenav li>a>[class^="mdi-"], .sidenav li>a li>a>[class*="mdi-"], .sidenav li>a>i.material-icons {
   float: left;
   height: 48px;
   line-height: 48px;
@@ -6817,11 +6861,11 @@ input[type=range]:focus::-ms-fill-upper {
   color: rgba(0, 0, 0, 0.54)
 }
 
-.side-nav .divider {
+.sidenav .divider {
   margin: 8px 0 0 0
 }
 
-.side-nav .subheader {
+.sidenav .subheader {
   cursor: initial;
   pointer-events: none;
   color: rgba(0, 0, 0, 0.54);
@@ -6830,26 +6874,26 @@ input[type=range]:focus::-ms-fill-upper {
   line-height: 48px
 }
 
-.side-nav .subheader:hover {
+.sidenav .subheader:hover {
   background-color: transparent
 }
 
-.side-nav .user-view, .side-nav .userView {
+.sidenav .user-view, .sidenav .userView {
   position: relative;
   padding: 32px 32px 0;
   margin-bottom: 8px
 }
 
-.side-nav .user-view>a, .side-nav .userView>a {
+.sidenav .user-view>a, .sidenav .userView>a {
   height: auto;
   padding: 0
 }
 
-.side-nav .user-view>a:hover, .side-nav .userView>a:hover {
+.sidenav .user-view>a:hover, .sidenav .userView>a:hover {
   background-color: transparent
 }
 
-.side-nav .user-view .background, .side-nav .userView .background {
+.sidenav .user-view .background, .sidenav .userView .background {
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -6859,26 +6903,26 @@ input[type=range]:focus::-ms-fill-upper {
   z-index: -1
 }
 
-.side-nav .user-view .circle, .side-nav .user-view .name, .side-nav .user-view .email, .side-nav .userView .circle, .side-nav .userView .name, .side-nav .userView .email {
+.sidenav .user-view .circle, .sidenav .user-view .name, .sidenav .user-view .email, .sidenav .userView .circle, .sidenav .userView .name, .sidenav .userView .email {
   display: block
 }
 
-.side-nav .user-view .circle, .side-nav .userView .circle {
+.sidenav .user-view .circle, .sidenav .userView .circle {
   height: 64px;
   width: 64px
 }
 
-.side-nav .user-view .name, .side-nav .user-view .email, .side-nav .userView .name, .side-nav .userView .email {
+.sidenav .user-view .name, .sidenav .user-view .email, .sidenav .userView .name, .sidenav .userView .email {
   font-size: 14px;
   line-height: 24px
 }
 
-.side-nav .user-view .name, .side-nav .userView .name {
+.sidenav .user-view .name, .sidenav .userView .name {
   margin-top: 16px;
   font-weight: 500
 }
 
-.side-nav .user-view .email, .side-nav .userView .email {
+.sidenav .user-view .email, .sidenav .userView .email {
   padding-bottom: 16px;
   font-weight: 400
 }
@@ -6891,48 +6935,48 @@ input[type=range]:focus::-ms-fill-upper {
   z-index: 998
 }
 
-.side-nav.fixed {
+.sidenav.fixed {
   left: 0;
   -webkit-transform: translateX(0);
   transform: translateX(0);
   position: fixed
 }
 
-.side-nav.fixed.right-aligned {
+.sidenav.fixed.right-aligned {
   right: 0;
   left: auto
 }
 
-/*@media only screen and (max-width: 992px) {
-  .side-nav.fixed {
+@media only screen and (max-width: 992px) {
+  .sidenav.fixed {
     -webkit-transform: translateX(-105%);
     transform: translateX(-105%)
-  } */
-  .side-nav.fixed.right-aligned {
+  }
+  .sidenav.fixed.right-aligned {
     -webkit-transform: translateX(105%);
     transform: translateX(105%)
   }
-  .side-nav a {
+  .sidenav a {
     padding: 0 16px
   }
-  .side-nav .user-view, .side-nav .userView {
+  .sidenav .user-view, .sidenav .userView {
     padding: 16px 16px 0
   }
 }
 
-.side-nav .collapsible-body>ul:not(.collapsible)>li.active, .side-nav.fixed .collapsible-body>ul:not(.collapsible)>li.active {
+.sidenav .collapsible-body>ul:not(.collapsible)>li.active, .sidenav.fixed .collapsible-body>ul:not(.collapsible)>li.active {
   background-color: #ee6e73
 }
 
-.side-nav .collapsible-body>ul:not(.collapsible)>li.active a, .side-nav.fixed .collapsible-body>ul:not(.collapsible)>li.active a {
+.sidenav .collapsible-body>ul:not(.collapsible)>li.active a, .sidenav.fixed .collapsible-body>ul:not(.collapsible)>li.active a {
   color: #fff
 }
 
-.side-nav .collapsible-body {
+.sidenav .collapsible-body {
   padding: 0
 }
 
-#sidenav-overlay {
+.sidenav-overlay {
   position: fixed;
   top: 0;
   left: 0;
