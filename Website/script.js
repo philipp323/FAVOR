@@ -10,9 +10,7 @@ window.addEventListener("load", function () {
             password: document.querySelector('#password').value
       }
 
-      console.log(params);
-
-      register();    var form = document.forms.namedItem("registerForm");
+      register();
   });
 
   function register() {
@@ -21,21 +19,25 @@ window.addEventListener("load", function () {
         var request = new XMLHttpRequest();
 
         request.addEventListener("load", function(event) {
-          window.location.href = "creation.html";
+          getMaxID();
         });
 
         request.addEventListener("error", function(event) {
           alert('Oops! Something went wrong.');
         });
 
+
         request.open("POST", url);
         request.setRequestHeader('Content-type', 'application/json');
 
-        console.log(JSON.strin)
         request.send(JSON.stringify(params));
 
   }
 });
+
+ function logout(){
+   localStorage.clear();
+ }
 
 window.addEventListener("load", function () {
     var form = document.forms.namedItem("memberAddForm");
@@ -44,7 +46,6 @@ window.addEventListener("load", function () {
     form.addEventListener("next", function (event) {
       event.preventDefault();
       params = {
-            famid: 0,
             firstname: document.querySelector('#first_name').value,
             lastname: document.querySelector('#last_name').value,
             birthdate: document.querySelector('#birthdate').value,
@@ -60,6 +61,7 @@ window.addEventListener("load", function () {
   function addMember() {
     var url = "http://localhost:3000/member";
     var request = new XMLHttpRequest();
+    var redirect = ''
 
     request.addEventListener("load", function(event) {
       window.location.href = "creation.html";
@@ -77,9 +79,68 @@ window.addEventListener("load", function () {
   }
 });
 
+function getMaxID() {
+  var url = "http://localhost:3000/family";
+  var request = new XMLHttpRequest();
+  var maxID;
+
+
+  request.addEventListener("load", function(event) {
+  });
+
+  request.addEventListener("error", function(event) {
+    alert('Oops! Something went wrong.');
+  });
+
+request.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var arr = JSON.parse(this.responseText);
+        console.log(arr);
+        maxID = arr.length - 1;
+        getCurrentFamily(maxID);
+    }
+};
+
+  request.open("GET", url, true);
+
+  request.send(null);
+}
+
+  function getCurrentFamily(famID) {
+    var url = "http://localhost:3000/family/" + famID;
+    var request = new XMLHttpRequest();
+    var fam;
+
+    request.addEventListener("load", function(event) {
+    });
+
+    request.addEventListener("error", function(event) {
+      alert('Oops! Something went wrong.');
+    });
+
+  request.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        fam = JSON.parse(this.responseText);
+        console.log(fam);
+        localStorage.setItem("name", fam.familyname);
+        localStorage.setItem("email", fam.email);
+        localStorage.setItem("id", fam.id);
+        window.location.href = "creation.html";
+      }
+  };
+
+    request.open("GET", url, true);
+    request.send();
+  }
+
+  function initApp() {
+    document.getElementById("familyTitle").innerHTML = localStorage.getItem("name");
+    console.log(localStorage.getItem("name"));
+  }
+
 defaultTags = [
     {tag: 'Housework'},
-    {tag:'Homework'},
+    {tag:'Gardening'},
 ];
 
 memberTags = [
@@ -101,7 +162,6 @@ memberTags = [
     $('#topicTag').material_chip({
         data: defaultTags
 	  });
-    
   }
 
   function activateYellowMenu(){
