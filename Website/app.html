@@ -16,12 +16,12 @@
 
 </head>
 
-<body>
+<body onload="initApp();">
   <div class="navbar-fixed">
-    <nav class="white" role="navigation">
+    <nav class="white" style="height:65px;">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo center hide-on-med-and-down orange-text"><b>Family Default</b></a>
-        <a href="#" data-activates="mobile" class="button-collapse"><i class="large material-icons">menu</i></a>
+        <a href="#" class="brand-logo center hide-on-med-and-down orange-text" id="familyTitle"></a>
+        <a href="#" data-activates="mobile-demo" class="sidenav-trigger"><i class="material-icons orange-text">menu</i></a>
 
         <!--Left alligned objects-->
         <ul class="left hide-on-med-and-down">
@@ -50,7 +50,7 @@
 
 
         <!--Right alligned objects-->
-        <ul class="right" style="height:65px">
+        <ul style="height:65px;" class="right">
           <li>
             <a href="#" style="height:65px; font-size:20px" class="transparent waves-effect orange-text">100<i class="large material-icons right">attach_money</i></a>
           </li>
@@ -59,12 +59,19 @@
               <i class="large material-icons orange">build</i></a>
           </li>
           <li>
-            <a href="index.html" class="btn-floating btn-large waves-effect"><i class="large material-icons orange">power_settings_new</i></a>
+            <a href="index.html" class="btn-floating btn-large waves-effect"><i class="large material-icons orange" onclick="logout();">power_settings_new</i></a>
           </li>
         </ul>
       </div>
     </nav>
   </div>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">Mobile</a></li>
+  </ul>
 
   <div class="fixed-action-btn">
     <a class="btn-floating btn-large waves-effect waves-light orange">
@@ -72,7 +79,7 @@
   </a>
     <ul>
       <li><a class="btn-floating yellow darken-2 modal-trigger tooltipped" data-position="left" data-delay="50" data-tooltip="Wish"
-        href="#wishModal" onClick="activateYellowMenu();"><i class="material-icons">playlist_add</i></a></li>
+        href="#wishModal" onlick="activateYellowMenu();"><i class="material-icons">playlist_add</i></a></li>
       <li><a class="btn-floating green modal-trigger tooltipped" data-position="left" data-delay="50" data-tooltip="Reward"
         href="#rewardModal" onClick="activateGreenMenu();"><i class="material-icons">cake</i></a></li>
       <li><a class="btn-floating blue modal-trigger tooltipped" data-position="left" data-delay="50" data-tooltip="Task"
@@ -89,8 +96,9 @@
               <div class="row">
                 <div class="input-field col s12 l6">
                   <i class="material-icons prefix">title</i>
-                  <input id="taskTitle" type="text" class="" required="required">
+                  <input id="taskTitle" type="text" class="validate">
                   <label for="taskTitle"><div lang="en">Title</div></label>
+                  <span class="helper-text" data-error="Type in a title..." data-success=""></span>
                 </div>
                 <div class="input-field col s6 l4">
                   <i class="material-icons prefix">access_alarm</i>
@@ -129,9 +137,9 @@
                </div>
               </div>
                 <button lang="en" class="btn waves-effect waves-light blue hide-on-small-only modal-close" type="reset">Cancel<i class="material-icons right">clear</i></button>
-                <button lang="en" class="btn waves-effect waves-light blue right hide-on-small-only modal-close" type="submit">Submit<i class="material-icons right">done</i></button>
+                <button lang="en" class="btn waves-effect waves-light blue right hide-on-small-only" type="submit">Submit<i class="material-icons right">done</i></button>
                 <button lang="en" class="btn waves-effect waves-light blue hide-on-med-and-up tooltipped modal-close" data-tooltip="Cancel" data-delay="50"><i class="material-icons">clear</i></button>
-                <button lang="en" class="btn waves-effect waves-light blue hide-on-med-and-up tooltipped right modal-close" type="submit" data-tooltip="Submit" data-delay="50"><i class="material-icons">done</i></button>
+                <button lang="en" class="btn waves-effect waves-light blue hide-on-med-and-up tooltipped right" type="submit" data-tooltip="Submit" data-delay="50"><i class="material-icons">done</i></button>
                 <br>
                 <br>
             </div>
