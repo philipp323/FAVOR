@@ -55,18 +55,19 @@ Project Documents:
   - creation.html (Page for the Family-Group-Creation-Process)
   - app.html (Page with Features and Functionalities, such as the Task-Create-Menu)
   
-  We invested a lot of time in designing and styling, features will follow soon!
+  I invested a lot of time in designing and styling, features will follow soon!
 
 ## :memo: Feature-List:
 
 - Register (Family-Group)
   - Saves data to JSON-File
+  - Table: "family"
 - Family-Member-Creation
   - Saves data to JSON-File
-  - Adds to a Family-Group
+  - Table: "member"
 - Task-Creation
   - Saves data to JSON-File
-  - Adds to a Family-Group
+  - Table: "task"
 
 ## :floppy_disk: Change-Log:
 
