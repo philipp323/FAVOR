@@ -63,6 +63,10 @@ Just for design and animation reviewing, the website is already [reachable onlin
 - Task-Creation
   - Saves data to JSON-File
   - Table: "task"
+- Family-Overview
+  - Gives information about the Family-Group
+- Logout
+  - Clears Local-Data
 
 ## :floppy_disk: Change-Log:
 
