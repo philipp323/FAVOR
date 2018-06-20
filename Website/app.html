@@ -20,10 +20,10 @@
   <div class="navbar-fixed">
     <nav class="white" style="height:65px;">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo center hide-on-med-and-down orange-text" id="familyTitle"></a>
+        <div class="brand-logo center hide-on-med-and-down orange-text" id="familyTitle"></div>
         <a href="#" data-activates="mobile-demo" class="sidenav-trigger"><i class="material-icons orange-text">menu</i></a>
 
-        <!--Left alligned objects-->
+        <!--Left alligned objects
         <ul class="left hide-on-med-and-down">
           <li>
             <a style="height:65px" href="#" class="image waves-effect">
@@ -46,14 +46,10 @@
             </a>
           </li>
         </ul>
-
-
+-->
 
         <!--Right alligned objects-->
         <ul style="height:65px;" class="right">
-          <li>
-            <a href="#" style="height:65px; font-size:20px" class="transparent waves-effect orange-text">100<i class="large material-icons right">attach_money</i></a>
-          </li>
           <li>
             <a href="#" class="btn-floating btn-large dropdown-button waves-effect" data-activates="dropdownSettings">
               <i class="large material-icons orange">build</i></a>
@@ -212,10 +208,48 @@
     </div>
   </div>
 
+  <div class="row no-padding-bottom orange marginDiv">
+    <div id="overviewModal" class="modal modalCentered col s12 m8 l6 offset-l3 offset-m2 no-padding">
+      <div class="modal-content">
+          <form class="col s12">
+            <div class="form-container col s12">
+              <h3 lang="en" class="orange-text center">Family Overview</h3>
+              <div class="row">
+                <div class="input-field col s12 l5">
+                  <input readonly id="familyName" class="cursor" type="text">
+                  <label for="familyName"><div lang="en">Family-Name</div></label>
+                </div>
+                <div class="input-field col s12 l5">
+                  <input readonly id="cDate" class="cursor" type="text">
+                  <label for="cDate"><div lang="en">Creation-Date</div></label>
+                </div>
+                <div class="input-field col s12 l2">
+                  <input readonly id="mCount" class="cursor" type="text">
+                  <label for="mCount"><div lang="en">Member</div></label>
+                </div>
+                 <h5 class="orange-text">Members:</h5>
+                 <div class="col s12">
+                   <ul class="collection" id="memberList">
+
+                   </ul>
+                 </div>
+              </div>
+              <div class="row">
+                <button lang="en" class="btn waves-effect waves-light orange hide-on-small-only right modal-close" onclick="clearTable();">Cancel<i class="left material-icons">clear</i></button>
+                <button lang="en" class="btn waves-effect waves-light orange hide-on-med-and-up tooltipped right modal-close"data-tooltip="Cancel" data-delay="50" onclick="clearTable();"><i class="material-icons">clear</i></button>
+                <a lang="en" href="creation.html" class="btn waves-effect waves-light orange hide-on-small-only left" onclick="clearTable();">Add member<i class="right material-icons">add</i></a>
+                <a lang="en" href="creation.html" class="btn waves-effect waves-light orange hide-on-med-and-up tooltipped left modal-close"data-tooltip="Add member" data-delay="50" onclick="clearTable();"><i class="material-icons">add</i></a>
+              </div>
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
+
   <ul id='dropdownSettings' class='dropdown-content' style="margin-top:65px">
     <li><a href="#!"><i class="material-icons">settings</i>General Settings</a></li>
     <li class="divider"></li>
-    <li><a href="#!"><i class="material-icons">face</i>Family Overview</a></li>
+    <li><a class="modal-trigger" onclick="activateOrangeMenu();initApp();generateTable();" href="#overviewModal"><i class="material-icons">face</i>Family Overview</a></li>
     <li class="divider"></li>
     <li><a href="#!"><i class="material-icons">help</i>Help Menu</a></li>
     <li class="divider"></li>
