@@ -3,10 +3,10 @@
 ## :clipboard: Table of Contents
 - [Introduction](#arrow_forward-introduction)
 - [Quickstart](#rocket-quickstart)
-- [Documentation](#page_facing_up-documentation)
 - [Site-List](#mag_right-site-list)
 - [Feature-List](#memo-feature-list)
 - [Change-Log](#floppy_disk-change-log)
+- [Documentation](#page_facing_up-documentation)
 - [Testing](#microscope-testing)
 - [Contributing](#chart_with_upwards_trend-contributing)
 - [Build with](#wrench-build-with)
@@ -41,12 +41,6 @@
 Just for design and animation reviewing, the website is already [reachable online.](http://favortest.somee.com/index.html)  
 :construction: Notice: No database connection given!
 
-##  :page_facing_up: Documentation:
-
-Project Documents:
-- [System Specification](Documents/SystemSpecificationFavor.pdf)
-- [Project Proposal](Documents/ProjectProposalFavor.pdf)
-
 ## :mag_right: Site-List:
 
 #### List of all reachable HTML-Files
@@ -73,8 +67,19 @@ Project Documents:
 
 Reachable in the [Footer of our Website](http://favortest.somee.com/#footer) -> "Website-History"
 
+##  :page_facing_up: Documentation:
+
+Project Documents:
+- [System Specification](Documents/SystemSpecificationFavor.pdf)
+- [Project Proposal](Documents/ProjectProposalFavor.pdf)
+
 ## :microscope: Testing:
 Browser: FireFox Quantum 60.0.2
+
+Testing-Documents:
+  - [Test-Specification](Documents/Test-Specification.pdf)
+  - [Test-Protocol](Documents/Test-Protocol.pdf)
+  - [Test-Report](Documents/Test-Report.pdf)
 
 
 ## :chart_with_upwards_trend: Contributing:
