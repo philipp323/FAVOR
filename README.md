@@ -39,6 +39,8 @@
   
 - Open "index.html" file
 
+- Info: [Manual](Documents/Manual.pdf)
+
 Just for design and animation reviewing, the website is already [reachable online.](http://favortest.somee.com/index.html)  
 :construction: Notice: No database connection given!
 
@@ -90,6 +92,8 @@ Testing-Documents:
 
 Known Issues:
   - Error in Console when POST/DELETE a element (still works)
+  - After task-creation F5 is needed to be pressed
+  - Problem with mobile-view in app.html
 
 ## :chart_with_upwards_trend: Contributing:
 
