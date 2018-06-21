@@ -124,7 +124,7 @@ More about us and our school on [our website](http://favorproject.somee.com/abou
 - JavaScript
 
 ## :link: Links:
-- [FAVOR](http://favortest.somee.com/index.html)
+- [FAVOR](http://favorproject.somee.com/index.html)
 - [Materialize](https://materializecss.com)
   - [Github](https://github.com/Dogfalo/materialize)
 - [JSON-Server](https://github.com/typicode/json-server)
