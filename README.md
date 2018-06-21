@@ -65,6 +65,8 @@ Just for design and animation reviewing, the website is already [reachable onlin
   - Table: "task"
 - Family-Overview
   - Gives information about the Family-Group
+- Remove Member
+  - In the Family-Overview
 - Logout
   - Clears Local-Data
 
