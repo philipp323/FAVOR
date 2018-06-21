@@ -1,57 +1,47 @@
 {
   "family": [
     {
-      "familyname": "Auinger",
-      "email": "philipp-auinger@gmx.at",
-      "password": "supersecretpassword",
+      "familyname": "Default",
+      "email": "Default",
+      "password": "Default",
+      "creationDate": "Default",
       "id": 0
-    },
-    {
-      "familyname": "Anteinsteiner",
-      "email": "thomas.antensteiner@gmail.com",
-      "password": "thisismypassword",
-      "id": 1
-    },
-    {
-      "familyname": "Mustermann",
-      "email": "mustermann@gmail.com",
-      "password": "oppassword",
-      "id": 2
-    },
-    {
-      "familyname": "Tripic",
-      "email": "tripic.nenad@gmail.com",
-      "password": "coolespassword",
-      "id": 3
     }
   ],
   "member": [
     {
-      "famid": 0,
-      "firstname": "David",
-      "lastname": "Auinger",
-      "birthdate": "17.05.1997",
-      "gender": "Male",
-      "Role": "Child",
+      "firstname": "Default",
+      "lastname": "Default",
+      "birthdate": "Default",
+      "gender": "Default",
+      "role": "Default",
+      "balance": "0",
+      "famId": "0",
       "id": 0
-    },
+    }
+  ],
+  "task": [
     {
-      "famid": 0,
-      "firstname": "Christine",
-      "lastname": "Auinger",
-      "birthdate": "03.05.1972",
-      "gender": "Female",
-      "Role": "Parent",
-      "id": 1
-    },
-    {
-      "famid": 1,
-      "firstname": "Thomas",
-      "lastname": "Antensteiner",
-      "birthdate": "11.07.2001",
-      "gender": "Male",
-      "Role": "Child",
-      "id": 2
+      "title": "Default",
+      "duedate": "Default",
+      "duetime": "Default",
+      "desc": "Default",
+      "who": [
+        {
+          "tag": "Default"
+        }
+      ],
+      "mandatory": "Default",
+      "what": [
+        {
+          "tag": "Default"
+        },
+        {
+          "tag": "Default"
+        }
+      ],
+      "famId": "0",
+      "id": 0
     }
   ]
 }
