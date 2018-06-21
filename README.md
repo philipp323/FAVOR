@@ -87,7 +87,7 @@ Testing-Documents:
   - [Test-Report](Documents/Test-Report.pdf)
 
 Known Issues:
-  - Error in Console when POSTing a element (still works)
+  - Error in Console when POST/DELETE a element (still works)
 
 ## :chart_with_upwards_trend: Contributing:
 
