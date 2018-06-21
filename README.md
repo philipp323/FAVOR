@@ -34,7 +34,12 @@
   $ json server --watch favor.json
     \{^_^}/ hi!
     Loading favor.json
-    ....
+    DONE
+    
+    Resources
+    http://localhost:3000/family
+    http://localhost:3000/member
+    http://localhost:3000/task
   ```
   
 - Open "index.html" file
