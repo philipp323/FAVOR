@@ -8,6 +8,8 @@
 - [Change-Log](#floppy_disk-change-log)
 - [Documentation](#page_facing_up-documentation)
 - [Testing](#microscope-testing)
+  - Testing-Documents
+  - Known Issues
 - [Contributing](#chart_with_upwards_trend-contributing)
 - [Build with](#wrench-build-with)
 - [Links](#link-links)
@@ -56,8 +58,6 @@ Just for design and animation reviewing, the website is already [reachable onlin
   - [about.html](http://favorproject.somee.com/about.html) (Page which shows us and our school)
   - creation.html (Page for the Family-Group-Creation-Process)
   - app.html (Page with Features and Functionalities, such as the Task-Create-Menu)
-  
-  I invested a lot of time in designing and styling, features will follow soon!
 
 ## :memo: Feature-List:
 
