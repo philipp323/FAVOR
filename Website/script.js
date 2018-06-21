@@ -171,7 +171,7 @@ request.onreadystatechange = function() {
           localStorage.setItem("members",this.responseText);
           var members = JSON.parse(this.responseText);
           memberCount = members.length;
-          localStorage.setItem("mCount", memberCount);
+          localStorage.setItem("mCount", memberCount.toString());
 
           var memberTag = [];
 
@@ -187,34 +187,137 @@ request.onreadystatechange = function() {
     request.send(null);
   }
 
+  function getTasks(){
+    var famID = localStorage.getItem("id");
+    var url = "http://localhost:3000/task?famId=" + famID;
+    var request = new XMLHttpRequest();
+
+    request.addEventListener("error", function(event) {
+      alert('Oops! Something went wrong.');
+    });
+
+    request.addEventListener("load", function(event) {
+      localStorage.setItem("tasks",this.responseText);
+    });
+
+    request.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          localStorage.setItem("tasks",this.responseText);
+      }
+  };
+
+    request.open("GET", url, true);
+
+    request.send(null);
+  }
+
   function generateTable(){
     var members = JSON.parse(localStorage.getItem("members"));
     var avatarSrc;
+    var id;
     $('#memberList').append('<div id="remove">');
     $.each(members, function( index, value ){
       avatarSrc = LetterAvatar(members[index].firstname, 60);
-      $('#memberList').append('<li class="collection-item avatar">' + '<img src="' + avatarSrc + '"class="circle">' + '<span class="title">Name: '
-      + members[index].firstname + '</span><p>Birthdate: ' + members[index].birthdate + ' <br>Role: ' + calcRole(members[index].role) + '</p> </li>');
+      id = members[index].id;
+      $('#memberList').append('<div id="' + id + '"><li class="collection-item avatar">' + '<img src="' + avatarSrc + '"class="circle">' + '<span class="title">Name: '
+      + members[index].firstname + '</span><p>Birthdate: ' + members[index].birthdate + ' <br>Role: ' + calcRole(members[index].role)
+      + '</p> <a onclick="removeMember('+ id +');remove(' + id + ');"class="secondary-content btn-floating orange waves-effect waves-light">'
+      + '<i class="material-icons">clear</i></a> </li> </div>');
     });
     $('#memberList').append('</div>');
   }
 
-  function clearTable(){
-    $('#remove').html('');
-  }
-function calcRole(id) {
-  if (id == 1) {
-    return "Parent";
-  } else if (id == 2) {
-    return "Child";
-  } else if (id == 3) {
-    return "Grandmother";
-  } else if (id == 4) {
-    return "Grandfather";
-  } else if (id == 5) {
-    return "Other";
-  }
+  function generateMemberNav(){
+    var members = JSON.parse(localStorage.getItem("members"));
+    var avatarSrc;
+    var id;
+    $.each(members, function( index, value ){
+      avatarSrc = LetterAvatar(members[index].firstname, 60);
+      id = members[index].id;
+      $('#memberNav').append('<li class="" style="margin-left:5px;margin-top:5px;display: inline-block;">'
+      + '<a onclick=""><img src="' + avatarSrc + '"class="circle" height="60" width="60"></li></a>');
+      $('#memberNav').append('<br>');
+  });
 }
+
+  function generateTasks(){
+    remove("taskDiv");
+    var tasks = JSON.parse(localStorage.getItem("tasks"));
+    var id;
+    $.each(tasks, function( index, value ){
+      id = tasks[index].id;
+      $('#taskDiv').append('<div class="col s9 l3">'
+                          + '<div class="card small cardHover orange" onhover="">'
+                          + '<div class="card-tabs">'
+                            + '<ul class="tabs tabs-fixed-width orange lighten-1">'
+                              + '<li class="tab"><a href="#'+ id +'info" class="active">Info</a></li>'
+                              + '<li class="tab"><a href="#'+ id +'minfo">More info</a></li>'
+                              + '<li class="tab"><a href="#'+ id +'desc">Desc</a></li>'
+                            + '</ul>'
+                          +'</div>'
+                          +'<div class="orange white-text">'
+                            +'<div id="'+ id +'info" class="card-content">'
+                              + '<div class="row">'
+                                + '<div class="col s12 l2">'
+                                  + '<p style="font-size: 25px;"><u>Title: </u></p>'
+                                + '</div>'
+                                + '<div class="col s10">'
+                                  + '<p style="font-size: 27px;"> ' + tasks[index].title + '</p>'
+                                + '</div>'
+                              + '</div>'
+                              + '<div class="row">'
+                                + '<div class="col s12">'
+                                  + '<p style="font-size: 25px;"><u>Due-Date: </u></p>'
+                                + '</div>'
+                                + '<div class="col s12">'
+                                  + '<p style="font-size: 27px;">' + tasks[index].duedate + ' ' + tasks[index].duetime + '</p>'
+                                + '</div>'
+                              + '</div>'
+                            +'</div>'
+                            +'<div id="'+ id +'minfo" class="card-content">'
+                              + '<p style="font-size: 27px;">Topic: ' + JSON.stringify(tasks[index].what[0].tag)  + '</p>'
+                            +'</div>'
+                            +'<div id="'+ id +'desc" class="card-content">'
+                              + '<p>' + tasks[index].desc + '</p>'
+                            +'</div>'
+                          + '</div>'
+                        + '</div>'
+                      + '</div>');
+    });
+  }
+
+
+
+  function remove(elementId){
+    $('#'+elementId).html('');
+  }
+
+  function calcRole(id) {
+    if (id == 1) {
+      return "Parent";
+    } else if (id == 2) {
+      return "Child";
+    } else if (id == 3) {
+      return "Grandmother";
+    } else if (id == 4) {
+      return "Grandfather";
+    } else if (id == 5) {
+      return "Other";
+    }
+  }
+
+  function removeMember(id){
+    var url = "http://localhost:3000/member/"+id;
+    var request = new XMLHttpRequest();
+
+    request.addEventListener("error", function(event) {
+      alert('Oops! Something went wrong.');
+    });
+
+    request.open("DELETE", url);
+
+    request.send(null);
+  }
 
 window.addEventListener("load", function () {
     var form = document.getElementById("taskForm");
@@ -229,7 +332,8 @@ window.addEventListener("load", function () {
             desc: document.querySelector('#description').value,
             who: $('#memberTag').material_chip('data'),
             mandatory: document.querySelector('#mandatory').value,
-            what: $('#topicTag').material_chip('data')
+            what: $('#topicTag').material_chip('data'),
+            famId: localStorage.getItem("id")
       }
       addTask();
   });
@@ -239,8 +343,11 @@ window.addEventListener("load", function () {
         var url = "http://localhost:3000/task";
         var request = new XMLHttpRequest();
 
-        request.addEventListener("load", function(event) 
-        });
+        request.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              generateTasks();
+          }
+      };
 
         request.addEventListener("error", function(event) {
           alert('Oops! Something went wrong.');
@@ -256,11 +363,34 @@ window.addEventListener("load", function () {
 });
 
   function initApp() {
+        generateTasks();
+  }
+
+  var reloadID;
+
+  function automaticReload(){
+    remove("memberList");
+    remove("memberNav");
     getMembers(localStorage.getItem("id"));
+    getTasks();
     document.getElementById("familyTitle").innerHTML = localStorage.getItem("name");
     document.getElementById("familyName").value = localStorage.getItem("name");
     document.getElementById("cDate").value = localStorage.getItem("cDate");
     document.getElementById("mCount").value = localStorage.getItem("mCount");
+    generateTable();
+    generateMemberNav();
+
+
+    reloadID = setTimeout(automaticReload, 1000);
+  }
+
+  function stopReloading(){
+    clearTimeout(reloadID);
+  }
+
+  function loadBtn(){
+    console.log("test");
+    document.getElementById("loadBtn").innerHTML = 'PRESS F5';
   }
 
 defaultTags = [
