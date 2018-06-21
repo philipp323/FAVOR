@@ -118,3 +118,26 @@ textarea:focus {
 
 
 .round { border-radius: 50%; }
+
+.tabs .tab a {
+  color: white;
+}
+
+.tabs .tab a:hover {
+  background-color: rgb(255, 160, 0);
+  color: white;
+}
+
+.tabs .tab a.active {
+  background-color: rgb(255, 140, 0);
+  color: white;
+}
+
+.cardHover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.cardHover:hover {
+  box-shadow: 0 14px 28px rgba(4, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
