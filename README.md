@@ -41,14 +41,14 @@
 
 - Info: [Manual](Documents/Manual.pdf)
 
-Just for design and animation reviewing, the website is already [reachable online.](http://favortest.somee.com/index.html)  
+Just for design and animation reviewing, the website is already [reachable online.](http://favorproject.somee.com/index.html)  
 :construction: Notice: No database connection given!
 
 ## :mag_right: Site-List:
 
 #### List of all reachable HTML-Files
-  - [index.html](http://favortest.somee.com/index.html) (Frontpage with Product Introduction)
-  - [about.html](http://favortest.somee.com/about.html) (Page which shows us and our school)
+  - [index.html](http://favorproject.somee.com/index.html) (Frontpage with Product Introduction)
+  - [about.html](http://favorproject.somee.com/about.html) (Page which shows us and our school)
   - creation.html (Page for the Family-Group-Creation-Process)
   - app.html (Page with Features and Functionalities, such as the Task-Create-Menu)
   
@@ -74,13 +74,14 @@ Just for design and animation reviewing, the website is already [reachable onlin
 
 ## :floppy_disk: Change-Log:
 
-Reachable in the [Footer of our Website](http://favortest.somee.com/#footer) -> "Website-History"
+Reachable in the [Footer of our Website](http://favorproject.somee.com/#footer) -> "Website-History"
 
 ##  :page_facing_up: Documentation:
 
 Project Documents:
 - [System Specification](Documents/SystemSpecificationFavor.pdf)
 - [Project Proposal](Documents/ProjectProposalFavor.pdf)
+- [Manual](Document/Manual.pdf)
 
 ## :microscope: Testing:
 Browser: FireFox Quantum 60.0.2
@@ -92,7 +93,7 @@ Testing-Documents:
 
 Known Issues:
   - Error in Console when POST/DELETE a element (still works)
-  - After task-creation F5 is needed to be pressed
+  - After task-creation site is needed to be reloaded
   - Problem with mobile-view in app.html
 
 ## :chart_with_upwards_trend: Contributing:
@@ -103,7 +104,7 @@ Known Issues:
 
 School: HTL Leonding
 
-More about us and our school on [our website](http://favortest.somee.com/about.html)
+More about us and our school on [our website](http://favorproject.somee.com/about.html)
 
 ### To see the contributions to master, of each developer, check out [this graph.](https://github.com/PhilippAuinger/FAVOR/graphs/contributors)
 
