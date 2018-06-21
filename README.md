@@ -86,6 +86,8 @@ Testing-Documents:
   - [Test-Protocol](Documents/Test-Protocol.pdf)
   - [Test-Report](Documents/Test-Report.pdf)
 
+Known Issues:
+  - Error in Console when POSTing a element (still works)
 
 ## :chart_with_upwards_trend: Contributing:
 
