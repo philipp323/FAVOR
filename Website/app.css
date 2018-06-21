@@ -106,3 +106,15 @@ textarea:focus {
   background-color: var(--main-color) !important;
   color: #fff
 }
+
+.cursor{
+  color: transparent;
+  text-shadow: 0 0 0 #000000;
+
+  &:focus {
+      outline: none;
+  }
+}
+
+
+.round { border-radius: 50%; }

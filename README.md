@@ -3,11 +3,15 @@
 ## :clipboard: Table of Contents
 - [Introduction](#arrow_forward-introduction)
 - [Quickstart](#rocket-quickstart)
+- [Site-List](#mag_right-site-list)
+- [Feature-List](#memo-feature-list)
+- [Change-Log](#floppy_disk-change-log)
 - [Documentation](#page_facing_up-documentation)
 - [Testing](#microscope-testing)
 - [Contributing](#chart_with_upwards_trend-contributing)
 - [Build with](#wrench-build-with)
 - [Links](#link-links)
+- [License](#lock-license)
 
 ## :arrow_forward: Introduction
 
@@ -35,14 +39,40 @@
   
 - Open "index.html" file
 
-#### List of all reachable HTML-Files
-  - index.html
-  - about.html
-  - creation.html
-  - app.html
-
 Just for design and animation reviewing, the website is already [reachable online.](http://favortest.somee.com/index.html)  
 :construction: Notice: No database connection given!
+
+## :mag_right: Site-List:
+
+#### List of all reachable HTML-Files
+  - [index.html](http://favortest.somee.com/index.html) (Frontpage with Product Introduction)
+  - [about.html](http://favortest.somee.com/about.html) (Page which shows us and our school)
+  - creation.html (Page for the Family-Group-Creation-Process)
+  - app.html (Page with Features and Functionalities, such as the Task-Create-Menu)
+  
+  I invested a lot of time in designing and styling, features will follow soon!
+
+## :memo: Feature-List:
+
+- Register (Family-Group)
+  - Saves data to JSON-File
+  - Table: "family"
+- Family-Member-Creation
+  - Saves data to JSON-File
+  - Table: "member"
+- Task-Creation
+  - Saves data to JSON-File
+  - Table: "task"
+- Family-Overview
+  - Gives information about the Family-Group
+- Remove Member
+  - In the Family-Overview
+- Logout
+  - Clears Local-Data
+
+## :floppy_disk: Change-Log:
+
+Reachable in the [Footer of our Website](http://favortest.somee.com/#footer) -> "Website-History"
 
 ##  :page_facing_up: Documentation:
 
@@ -51,8 +81,15 @@ Project Documents:
 - [Project Proposal](Documents/ProjectProposalFavor.pdf)
 
 ## :microscope: Testing:
+Browser: FireFox Quantum 60.0.2
 
+Testing-Documents:
+  - [Test-Specification](Documents/Test-Specification.pdf)
+  - [Test-Protocol](Documents/Test-Protocol.pdf)
+  - [Test-Report](Documents/Test-Report.pdf)
 
+Known Issues:
+  - Error in Console when POST/DELETE a element (still works)
 
 ## :chart_with_upwards_trend: Contributing:
 
@@ -76,8 +113,33 @@ More about us and our school on [our website](http://favortest.somee.com/about.h
 - CSS
 - JavaScript
 
-## :link: Links
+## :link: Links:
 - [FAVOR](http://favortest.somee.com/index.html)
 - [Materialize](https://materializecss.com)
   - [Github](https://github.com/Dogfalo/materialize)
 - [JSON-Server](https://github.com/typicode/json-server)
+
+
+## :lock: License:
+
+[MIT License](LICENSE)
+
+Copyright (c) 2018 Philipp A.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
